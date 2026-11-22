@@ -1,114 +1,209 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selah Studio — The Maker Arm — Selah Practice</title>
-<meta name="description" content="Handmade soaps, perfumes, and oils from Selah Studio, the maker arm of Selah Practice. Shop on Payhip.">
+<title>Selah Studio — Handmade Soaps, Balms &amp; Oils | Selah Practice</title>
+<meta name="description" content="Selah Studio is the maker's arm of Selah Practice: small-batch soaps, balms, perfume oils, and facial oils, handmade in Winnipeg. A pause for your skin. A soft place for your nervous system.">
+<link rel="icon" href="selah-icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1a1410;--deep:#1e1409;--deep2:#2d1f14;--mid:#3a2a18;--parchment:#f6f1e8;--cream:#faf7f1;--warm:#c9b99a;--amber:#b07d35;--rust:#8a3e22;--blush:#c4856a;--sage:#4e6349;--muted:#8a7b68;--border:#ddd3c0;}
+:root{
+  --paper:#faf6ef; --card:#fffdf8; --cream:#f5eee0;
+  --slate:#4a3423; --slate-deep:#2e1f13; --ink:#38302a; --body:#5c554b; --muted:#96887a;
+  --sand:#e7dcc8; --amber:#b07d35; --sage:#77815f; --rust:#8a3e22;
+  --radius:14px; --shadow:0 10px 30px rgba(74,52,35,.08);
+}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--cream);color:var(--mid);font-family:'Cormorant Garamond',serif;-webkit-font-smoothing:antialiased;}
-::selection{background:var(--amber);color:var(--deep);}
-nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;background:rgba(30,20,9,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,185,154,.14);}
-nav .brand{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--parchment);text-decoration:none;}
-nav .links{display:flex;gap:22px;}
-nav .links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
-nav .links a:hover{color:var(--amber);}
-@media(max-width:760px){nav .links{display:none;}}
-.hero{background:radial-gradient(120% 90% at 50% 0%,#3a2817 0%,var(--deep2) 45%,var(--deep) 100%);color:var(--parchment);padding:150px 24px 80px;text-align:center;position:relative;overflow:hidden;}
-.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(176,125,53,.05) 59px,rgba(176,125,53,.05) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(176,125,53,.04) 59px,rgba(176,125,53,.04) 60px);}
-.hero .in{position:relative;z-index:2;max-width:780px;margin:0 auto;}
-.eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:24px;}
-.hero h1{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:clamp(34px,6vw,56px);line-height:1.15;}
-.hero h1 em{color:var(--blush);}
-.hero .sub{font-size:19px;font-style:italic;color:var(--warm);line-height:1.65;max-width:560px;margin:24px auto 0;}
-.hero .meta{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:26px;}
-.wrap{max-width:720px;margin:0 auto;padding:64px 24px 30px;}
-.wrap p{font-size:19.5px;line-height:1.8;margin-bottom:20px;}
-.wrap p em{color:var(--rust);}
-.wrap h2{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:28px;color:var(--deep);margin:40px 0 16px;}
-.wrap blockquote{border-left:3px solid var(--blush);padding:6px 0 6px 24px;margin:30px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.55;color:var(--deep);}
-.wrap blockquote cite{display:block;margin-top:10px;font-family:'DM Mono',monospace;font-style:normal;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
-.wrap ul{margin:0 0 20px 22px;}
-.wrap li{font-size:19px;line-height:1.7;margin-bottom:8px;}
-.kintsugi{height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent);margin:44px auto;max-width:340px;position:relative;}
-.kintsugi::after{content:"";position:absolute;left:50%;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateX(-50%);}
-.cta-box{background:var(--deep);color:var(--parchment);padding:46px 34px;text-align:center;margin:50px 0 10px;}
-.cta-box h3{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:27px;margin-bottom:12px;}
-.cta-box p{color:var(--warm);font-size:17px;max-width:440px;margin:0 auto 24px;}
-.btn{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:15px 30px;text-decoration:none;background:var(--parchment);color:var(--deep);}
-.btn:hover{background:var(--amber);}
-.btn-line{background:none;border:1px solid rgba(201,185,154,.5);color:var(--parchment);}
-.series-nav{display:flex;justify-content:space-between;gap:14px;max-width:720px;margin:0 auto;padding:0 24px 70px;flex-wrap:wrap;}
-.series-nav a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rust);text-decoration:none;border:1px solid var(--border);padding:13px 20px;background:#fff;}
-.series-nav a:hover{border-color:var(--amber);color:var(--amber);}
-footer{background:var(--deep);padding:56px 24px 44px;text-align:center;}
-footer .logo{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--parchment);margin-bottom:16px;}
-footer .fl{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
-footer .fl a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
-footer .fl a:hover{color:var(--amber);}
-footer .cp{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:.65;}
-
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+img{max-width:100%;}
+a{color:var(--slate);}
+.script{font-family:'La Belle Aurore',cursive;font-weight:400;color:var(--slate);}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);font-weight:500;text-align:center;}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--slate-deep);line-height:1.15;}
+h2{font-size:40px;text-align:center;margin-top:14px;}
+.lede{max-width:640px;margin:16px auto 0;text-align:center;color:var(--body);font-size:18px;font-weight:300;}
+section{padding:72px 0;}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;font-size:14.5px;font-weight:500;text-decoration:none;border:1.5px solid var(--slate);background:var(--slate);color:#f6f1e8;transition:opacity .2s;}
+.btn:hover{opacity:.85;}
+.tag{display:inline-block;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 13px;border-radius:99px;font-weight:500;background:#f7efe0;color:var(--amber);border:1px solid #e8dcc2;}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand);}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;}
+header img.logo{height:46px;width:auto;}
+nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+nav a{text-decoration:none;font-size:14.5px;color:var(--slate);letter-spacing:.4px;}
+nav a.navbtn{border:1.5px solid var(--slate);padding:9px 20px;border-radius:99px;font-weight:500;}
+@media(max-width:760px){nav a:not(.navbtn){display:none;}}
+.shop-hero{padding:72px 0 8px;text-align:center;}
+.shop-hero img.mark{width:min(300px,72%);height:auto;margin:0 auto;}
+.shop-hero h1{font-size:44px;margin-top:26px;}
+@media(max-width:560px){.shop-hero h1{font-size:34px;}}
+.shop-hero .sub{max-width:620px;margin:16px auto 0;color:var(--body);font-size:18px;font-weight:300;}
+.shop-hero .note{margin-top:14px;font-size:13.5px;color:var(--muted);letter-spacing:.4px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:580px){.grid{grid-template-columns:1fr;}}
+.product{background:var(--card);border:1px solid var(--sand);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;}
+.product .ph{aspect-ratio:1/1;overflow:hidden;background:var(--cream);}
+.product .ph img{width:100%;height:100%;object-fit:cover;display:block;}
+.product .pb{padding:22px 22px 24px;display:flex;flex-direction:column;gap:7px;flex:1;}
+.product h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:var(--slate-deep);line-height:1.25;}
+.product p{color:var(--body);font-size:14.5px;font-weight:300;flex:1;}
+.product .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;}
+.product .price{font-size:17px;font-weight:500;color:var(--slate-deep);}
+.product .price small{font-size:12px;color:var(--muted);letter-spacing:1px;}
+.about{background:var(--cream);}
+.about .inner{max-width:720px;margin:0 auto;text-align:center;}
+.about p{margin-top:18px;color:var(--body);font-weight:300;font-size:17.5px;}
+.about .script{font-size:32px;}
+footer{background:#211507;color:#c9b99a;padding:64px 0 44px;text-align:center;}
+footer img{height:64px;width:auto;margin:0 auto;}
+footer .flinks{margin-top:26px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+footer .flinks a{color:#ece1cb;text-decoration:none;font-size:14.5px;}
+footer .disc{max-width:680px;margin:30px auto 0;font-size:13px;line-height:1.7;color:#a08b6d;}
+footer .small{margin-top:18px;font-size:13px;color:#8a755a;}
 </style>
 </head>
 <body>
-<nav>
-  <a class="brand" href="https://selahpractice.ca/">Selah Practice</a>
-  <div class="links">
-    <a href="https://selahpractice.ca/#what">Check-Up</a>
-    <a href="https://selahpractice.ca/#blog">Journal</a>
-    <a href="https://selahpractice.ca/#the-book">The Book</a>
-    <a href="https://selahpractice.ca/#resources">Resources</a>
-    <a href="https://selahpractice.ca/#about">About</a>
-    <a href="https://selahpractice.ca/#contact">Contact</a>
+
+<header>
+  <div class="wrap header-in">
+    <a href="index.html"><img class="logo" src="selah-logo.svg" alt="Selah Practice"></a>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="index.html#journal">Journal</a>
+      <a class="navbtn" href="index.html#contact">Join the Waitlist</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-<section class="hero"><div class="in">
-  <span class="eyebrow">Selah Studio · The Maker Arm</span>
-  <h1>Selah <em>Studio</em></h1>
-  <p class="sub">Soaps, perfumes, and oils — small, handmade doors into the same philosophy.</p>
-  <div class="meta">Handmade in Winnipeg · Shop on Payhip</div>
-</div></section>
-<div class="wrap">
-
-<p>Selah Studio is where the philosophy gets a scent and a weight in your hand. Small-batch soaps, perfumes, and oils, made slowly, in the same spirit as everything at Selah Practice: the body is not an afterthought, and care can be ordinary and holy at the same time.</p>
-<h2>What you'll find in the shop</h2>
-<ul>
-<li><strong>Handmade soaps</strong> — small-batch bars, including the mini soaps made for gifts and party favours</li>
-<li><strong>Balms and oils</strong> — for skin that needs gentleness, made with the PNI eye for what touches the body</li>
-<li><strong>Perfumes</strong> — quiet, warm scents; nothing that enters the room before you do</li>
-<li><strong>Selah Cards and small goods</strong> — the tiny teachings, printed to keep</li>
-</ul>
-<div class="kintsugi"></div>
-<p>The full shop lives on Payhip, where checkout is simple and secure.</p>
-<div class="cta-box">
-  <h3>Enter the Studio</h3>
-  <p>Browse the current collection at the Selah Studio shop.</p>
-  <a class="btn" href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Shop Selah Studio →</a>
-</div>
-<p style="text-align:center;"><a href="https://selahpractice.ca/" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);text-decoration:none;">← Back to Selah Practice</a></p>
-
-
+<div class="shop-hero">
+  <div class="wrap">
+    <img class="mark" src="selah-logo-studio.svg" alt="Selah Studio">
+    <div class="eyebrow" style="margin-top:26px;">Selah Studio · The Maker's Arm of Selah Practice</div>
+    <h1>A pause for your skin.<br>A soft place for your nervous system.</h1>
+    <p class="sub">Small-batch soaps, balms, and oils — soft scents, simple textures, nothing loud. Handmade in Winnipeg, in the same spirit as everything at Selah: care can be ordinary and holy at the same time.</p>
+    <p class="note">Shop here · Checkout is handled securely by Payhip · Prices in Canadian dollars</p>
+  </div>
 </div>
 
+<section id="soaps">
+  <div class="wrap">
+    <div class="eyebrow">Handcrafted · Small Batch</div>
+    <h2>Soaps</h2>
+    <div class="grid">
+      <div class="product">
+        <div class="ph"><img src="studio-honey-oat-soap.jpg" alt="Honey Oat Rosemary Arch Soap Bar"></div>
+        <div class="pb"><h3>Honey Oat Rosemary Arch Soap Bar</h3><p>Handcrafted arch soap — gentle, everyday, small batch.</p>
+        <div class="row"><span class="price">$4.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/2iBFy" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-lavender-milk-soap.jpg" alt="Lavender Milk Arch Soap Bar"></div>
+        <div class="pb"><h3>Lavender Milk Arch Soap Bar</h3><p>Handcrafted arch soap with a soft lavender calm.</p>
+        <div class="row"><span class="price">$7.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/T3c8V" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-snowflake-soap.jpg" alt="Lavender and Cream Snowflake Soap"></div>
+        <div class="pb"><span class="tag">Winter Collection</span><h3>Lavender + Cream Snowflake Soap</h3><p>A handcrafted snowflake bar for the winter season.</p>
+        <div class="row"><span class="price">$5.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/U4OLi" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="balms" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">For Skin That Needs Gentleness</div>
+    <h2>Balms &amp; Oils</h2>
+    <div class="grid">
+      <div class="product">
+        <div class="ph"><img src="studio-amber-shea-balm.jpg" alt="Amber Shea Body Balm"></div>
+        <div class="pb"><h3>Amber Shea Body Balm</h3><p>A rich shea body balm in a gold tin. 2 oz · 60 g.</p>
+        <div class="row"><span class="price">$12.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/SmYNu" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-rose-petal-oil.jpg" alt="Rose Petal Body Oil"></div>
+        <div class="pb"><h3>Rose Petal Body Oil</h3><p>Rose petal body oil for soft, unhurried care. 2 oz · 60 mL.</p>
+        <div class="row"><span class="price">$21.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/r48YR" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-facial-oil.jpg" alt="Lavender Rose Glow Facial Oil"></div>
+        <div class="pb"><h3>Lavender Rose Glow Facial Oil</h3><p>Lavender, jojoba, and rosehip. 10 mL.</p>
+        <div class="row"><span class="price">$17.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/jr8nJ" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-rose-lip-balm.jpg" alt="Rose Tint Lip Balm"></div>
+        <div class="pb"><h3>Rose Tint Lip Balm</h3><p>A soft rose tint — jojoba oil, shea butter, beeswax.</p>
+        <div class="row"><span class="price">$5.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/V7nfO" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="perfume" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">Roll-On · 10 mL</div>
+    <h2>Perfume Oils &amp; Ritual</h2>
+    <div class="grid">
+      <div class="product">
+        <div class="ph"><img src="studio-signature-oil.jpg" alt="Signature Perfume Oil"></div>
+        <div class="pb"><h3>Signature Perfume Oil</h3><p>The Selah Studio signature scent, in a 10 mL roll-on.</p>
+        <div class="row"><span class="price">$24.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/iBIpL" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-coffee-amber.jpg" alt="Coffee Amber Perfume Oil"></div>
+        <div class="pb"><h3>Coffee Amber — Perfume Oil</h3><p>Warm coffee and amber, in a 10 mL roll-on.</p>
+        <div class="row"><span class="price">$14.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/5Qof6" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-ocean-fresh.jpg" alt="Ocean Fresh Perfume Oil"></div>
+        <div class="pb"><h3>Ocean Fresh — Perfume Oil</h3><p>Clean and light, in a 10 mL roll-on.</p>
+        <div class="row"><span class="price">$14.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/MwOd0" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-vanilla-amber.jpg" alt="Vanilla Amber Perfume Oil"></div>
+        <div class="pb"><h3>Vanilla Amber — Perfume Oil</h3><p>Soft vanilla wrapped in amber, in a 10 mL roll-on.</p>
+        <div class="row"><span class="price">$14.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/mM7jV" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+      <div class="product">
+        <div class="ph"><img src="studio-cooling-reset.jpg" alt="Cooling Reset Roll-On and Spray"></div>
+        <div class="pb"><h3>Cooling Reset — Roll-On + Spray</h3><p>A cooling reset for hot, overwhelmed moments. 10 mL.</p>
+        <div class="row"><span class="price">$17.99 <small>CAD</small></span><a class="btn" href="https://payhip.com/b/9HfnC" target="_blank" rel="noopener">Buy</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="inner">
+      <div class="script">about the studio</div>
+      <h2>Born from living with it</h2>
+      <p>Selah Studio was born from living with psoriasis and the exhaustion of always managing it. I wanted products that felt gentle — on my skin and on my senses — so I started making them.</p>
+      <p>Small-batch soaps and calming oils. Soft scents. Simple textures. Nothing loud. Just care that doesn't overwhelm.</p>
+      <p>Selah means <i>pause, breathe, and look again.</i> That's what this is: a quiet reminder that healing can be slow, and God can still be present in it.</p>
+      <p>Welcome to Selah Studio.</p>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="logo">Selah Practice</div>
-  <div class="fl">
-    <a href="https://selahpractice.ca/">Home</a>
-    <a href="https://selahpractice.ca/#blog">Journal</a>
-    <a href="https://selahpractice.ca/selah-childrens-book.html">The Book</a>
-    <a href="https://selahpractice.ca/#contact">Contact</a>
-    <a href="https://www.instagram.com/selahpractice/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Selah Studio</a>
-    <a href="https://selahpractice.ca/selah-privacy-policy.html">Privacy Policy</a>
+  <div class="wrap">
+    <img src="selah-logo-dark.svg" alt="Selah Practice">
+    <div class="flinks">
+      <a href="index.html">Selah Practice</a><a href="index.html#about">About</a><a href="index.html#resources">Resources</a><a href="index.html#journal">Journal</a><a href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Payhip Store</a><a href="selah-privacy-policy.html">Privacy</a><a href="https://www.instagram.com/selahpractice/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="disc">Checkout, payment, and order confirmation are handled by Payhip; shipping and returns are confirmed at checkout. Selah Studio products are handmade in small batches — colours and scents may vary slightly from batch to batch.</p>
+    <p class="small">Every crack tells a story. Every repair shines with strength. · Winnipeg, Manitoba · © 2026 Selah Practice</p>
   </div>
-  <div class="cp">© 2026 Selah Practice · Winnipeg · Every crack tells a story</div>
 </footer>
+
 </body>
 </html>
