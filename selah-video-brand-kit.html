@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selah Video Brand Kit — Canva & CapCut — Selah Practice</title>
+<meta name="description" content="The Selah video brand kit: Canva brand setup, the CapCut SP Warm preset, fonts, colours, and lower-third specs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1410;--deep:#1e1409;--deep2:#2d1f14;--mid:#3a2a18;--parchment:#f6f1e8;--cream:#faf7f1;--warm:#c9b99a;--amber:#b07d35;--rust:#8a3e22;--blush:#c4856a;--sage:#4e6349;--muted:#8a7b68;--border:#ddd3c0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--mid);font-family:'Cormorant Garamond',serif;-webkit-font-smoothing:antialiased;}
+::selection{background:var(--amber);color:var(--deep);}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;background:rgba(30,20,9,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,185,154,.14);}
+nav .brand{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--parchment);text-decoration:none;}
+nav .links{display:flex;gap:22px;}
+nav .links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
+nav .links a:hover{color:var(--amber);}
+@media(max-width:760px){nav .links{display:none;}}
+.hero{background:radial-gradient(120% 90% at 50% 0%,#3a2817 0%,var(--deep2) 45%,var(--deep) 100%);color:var(--parchment);padding:150px 24px 80px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(176,125,53,.05) 59px,rgba(176,125,53,.05) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(176,125,53,.04) 59px,rgba(176,125,53,.04) 60px);}
+.hero .in{position:relative;z-index:2;max-width:780px;margin:0 auto;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:24px;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:clamp(34px,6vw,56px);line-height:1.15;}
+.hero h1 em{color:var(--blush);}
+.hero .sub{font-size:19px;font-style:italic;color:var(--warm);line-height:1.65;max-width:560px;margin:24px auto 0;}
+.hero .meta{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:26px;}
+.wrap{max-width:720px;margin:0 auto;padding:64px 24px 30px;}
+.wrap p{font-size:19.5px;line-height:1.8;margin-bottom:20px;}
+.wrap p em{color:var(--rust);}
+.wrap h2{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:28px;color:var(--deep);margin:40px 0 16px;}
+.wrap blockquote{border-left:3px solid var(--blush);padding:6px 0 6px 24px;margin:30px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.55;color:var(--deep);}
+.wrap blockquote cite{display:block;margin-top:10px;font-family:'DM Mono',monospace;font-style:normal;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.wrap ul{margin:0 0 20px 22px;}
+.wrap li{font-size:19px;line-height:1.7;margin-bottom:8px;}
+.kintsugi{height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent);margin:44px auto;max-width:340px;position:relative;}
+.kintsugi::after{content:"";position:absolute;left:50%;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateX(-50%);}
+.cta-box{background:var(--deep);color:var(--parchment);padding:46px 34px;text-align:center;margin:50px 0 10px;}
+.cta-box h3{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:27px;margin-bottom:12px;}
+.cta-box p{color:var(--warm);font-size:17px;max-width:440px;margin:0 auto 24px;}
+.btn{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:15px 30px;text-decoration:none;background:var(--parchment);color:var(--deep);}
+.btn:hover{background:var(--amber);}
+.btn-line{background:none;border:1px solid rgba(201,185,154,.5);color:var(--parchment);}
+.series-nav{display:flex;justify-content:space-between;gap:14px;max-width:720px;margin:0 auto;padding:0 24px 70px;flex-wrap:wrap;}
+.series-nav a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rust);text-decoration:none;border:1px solid var(--border);padding:13px 20px;background:#fff;}
+.series-nav a:hover{border-color:var(--amber);color:var(--amber);}
+footer{background:var(--deep);padding:56px 24px 44px;text-align:center;}
+footer .logo{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--parchment);margin-bottom:16px;}
+footer .fl{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+footer .fl a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
+footer .fl a:hover{color:var(--amber);}
+footer .cp{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:.65;}
+
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="https://selahpractice.ca/">Selah Practice</a>
+  <div class="links">
+    <a href="https://selahpractice.ca/#what">Check-Up</a>
+    <a href="https://selahpractice.ca/#blog">Journal</a>
+    <a href="https://selahpractice.ca/#the-book">The Book</a>
+    <a href="https://selahpractice.ca/#resources">Resources</a>
+    <a href="https://selahpractice.ca/#about">About</a>
+    <a href="https://selahpractice.ca/#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero"><div class="in">
+  <span class="eyebrow">Selah Content · Brand Kit</span>
+  <h1>Video Brand <em>Kit</em></h1>
+  <p class="sub">Every video, unmistakably Selah: dark, warm, editorial, aged.</p>
+  <div class="meta">Canva · CapCut SP Warm · Specs</div>
+</div></section>
+<div class="wrap">
+
+<h2>Canva brand kit</h2>
+<ul>
+<li><strong>Colours:</strong> Deep #16120d · Ink #1e1409 · Mid #3a2a18 · Amber #b07d35 · Blush #c4856a · Warm #c9b99a · Parchment #f6f1e8 · Rust #8a3e22 · Sage #4e6349 · Border #ddd3c0</li>
+<li><strong>Fonts:</strong> Playfair Display Italic (titles), Cormorant Garamond Italic (captions/quotes), DM Mono (labels), Inter Black 900 (thumbnail keywords only)</li>
+<li><strong>Textures:</strong> aged paper, 60px grid overlay at 4% amber, kintsugi crack SVGs (stroke #b07d35, width 0.8–1.2, opacity 0.09–0.15, circle nodes at joints)</li>
+</ul>
+<h2>CapCut — the SP Warm preset</h2>
+<ul>
+<li>Warmth +12 · Saturation −8 · Contrast +6 · Highlights −15 · Shadows +10 · Fade +8 · Grain +6 (fine)</li>
+<li>Skin tones protected: keep faces natural; the grade lives in the background</li>
+<li>Export: 4K source → 1080p upload, captions burned from the Selah caption style (Cormorant italic, parchment, deep outline)</li>
+</ul>
+<h2>On-screen specs</h2>
+<ul>
+<li><strong>Lower third:</strong> DM Mono 9px-equivalent, letterspaced, amber rule above the name</li>
+<li><strong>Scripture cards:</strong> full-frame deep background, grid overlay, Playfair italic quote, DM Mono reference</li>
+<li><strong>End card:</strong> parchment, kintsugi line, “Selah — pause, lift, look again.” + Check-Up URL</li>
+<li><strong>Music:</strong> solo piano, sparse; never under a Scripture reading</li>
+</ul>
+
+
+<div class="cta-box">
+  <h3>The Selah Letter</h3>
+  <p>A weekly devotional for a nervous system that needs God. Handwritten Scripture, a short PNI reflection, one quiet page a week.</p>
+  <a class="btn" href="https://selahpractice.ca/#contact">Join the Letter</a>
+</div>
+
+</div>
+
+
+<footer>
+  <div class="logo">Selah Practice</div>
+  <div class="fl">
+    <a href="https://selahpractice.ca/">Home</a>
+    <a href="https://selahpractice.ca/#blog">Journal</a>
+    <a href="https://selahpractice.ca/selah-childrens-book.html">The Book</a>
+    <a href="https://selahpractice.ca/#contact">Contact</a>
+    <a href="https://www.instagram.com/selahpractice/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Selah Studio</a>
+    <a href="https://selahpractice.ca/selah-privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div class="cp">© 2026 Selah Practice · Winnipeg · Every crack tells a story</div>
+</footer>
+</body>
+</html>
