@@ -2619,103 +2619,92 @@ body.force-mobile .view-toggle {
 }
 
 </style>
-</head>
+<style>
+.bkv{max-width:640px;margin:0 auto;text-align:center;}
+.bkv-frame{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(30,20,9,.28);background:#efe6d4;aspect-ratio:4/3;}
+.bkv-frame img{width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity .55s ease;}
+.bkv-frame img.fading{opacity:0;}
+.bkv-textpage{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:36px;background:radial-gradient(120% 100% at 50% 0%,#3a2817,#1e1409);}
+.bkv-textpage p{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,3.4vw,27px);line-height:1.55;color:#f6f1e8;max-width:420px;}
+.bkv-caption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;line-height:1.65;color:var(--mid);min-height:64px;margin:22px auto 6px;max-width:520px;transition:opacity .4s ease;}
+.bkv-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:10px;}
+.bkv-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;background:none;border:1px solid var(--border);color:var(--mid);padding:12px 22px;cursor:pointer;transition:all .3s;}
+.bkv-btn:hover{border-color:var(--amber);color:var(--amber);}
+.bkv-btn:disabled{opacity:.35;cursor:default;}
+.bkv-dots{display:flex;gap:7px;}
+.bkv-dot{width:7px;height:7px;border-radius:50%;background:var(--border);transition:background .3s;}
+.bkv-dot.on{background:var(--amber);}
+.bkv-count{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--muted);margin-top:14px;text-transform:uppercase;}
+
+.book-hero{padding:120px 24px 10px;text-align:center;}
+.book-hero h1{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:clamp(38px,7vw,64px);color:var(--deep);line-height:1.1;}
+.book-hero .sub{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--muted);margin-top:14px;}
+.book-wrap{padding:36px 24px 90px;}
+</style></head>
 <body>
-<div style="background:#2d1f14;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;">
-  <a href="https://selahpractice.ca/" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#c8b89a;text-decoration:none;">Selah Practice</a>
-  <a href="https://selahpractice.ca/" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8b89a;text-decoration:none;border:1px solid rgba(201,185,154,0.3);padding:8px 16px;">&#8592; Back to Selah Practice</a>
-</div>
-<!-- CHILDREN'S BOOK -->
-<section style="background:var(--cream);padding:100px 24px;border-top:1px solid var(--border);" id="the-book">
-  <div style="max-width:900px;margin:0 auto;">
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-
-      <!-- LEFT: Book visual -->
-      <div style="position:relative;">
-        <!-- Book cover mockup -->
-        <div style="background:var(--deep);padding:48px 40px;position:relative;overflow:hidden;box-shadow:12px 12px 40px rgba(30,20,9,0.25);">
-          <!-- Grid pattern -->
-          <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(176,125,53,0.05) 24px,rgba(176,125,53,0.05) 25px),repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(176,125,53,0.04) 24px,rgba(176,125,53,0.04) 25px);"></div>
-          <!-- Kintsugi crack decoration -->
-          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.12;" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-            <path d="M80 60 L110 120 L90 180 L140 240 L120 300" stroke="#b07d35" stroke-width="2.5" fill="none"/>
-            <path d="M280 80 L250 150 L270 210 L230 270" stroke="#b07d35" stroke-width="2" fill="none"/>
-            <circle cx="110" cy="120" r="5" fill="#b07d35"/>
-            <circle cx="250" cy="150" r="4" fill="#b07d35"/>
-            <circle cx="140" cy="240" r="4" fill="#b07d35"/>
-          </svg>
-          <div style="position:relative;z-index:1;">
-            <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:24px;">A Story for Children &nbsp;&middot;&nbsp; Ages 6&ndash;9</div>
-            <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,44px);font-weight:300;font-style:italic;color:var(--parchment);line-height:1.2;margin-bottom:12px;">The Cracks<br>That Shine</h2>
-            <div style="width:40px;height:1px;background:var(--amber);margin:16px 0;"></div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--warm);line-height:1.6;margin-bottom:32px;">A story about breaking, mending,<br>and the gold that lives in between.</p>
-            <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--amber);">Written by Pennye Eshetu</div>
-          </div>
-        </div>
-        <!-- Shadow tab on left edge (book spine illusion) -->
-        <div style="position:absolute;top:0;left:-10px;bottom:0;width:10px;background:linear-gradient(to right,rgba(30,20,9,0.4),transparent);"></div>
-      </div>
-
-      <!-- RIGHT: Story + context -->
-      <div>
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:16px;">A Story</div>
-
-        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,32px);font-weight:300;font-style:italic;color:var(--deep);line-height:1.3;margin-bottom:20px;">For the child who needed<br><em style="color:var(--rust);">someone to tell her sooner.</em></h3>
-
-        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.8;color:var(--mid);margin-bottom:20px;">Naya has a favourite bowl &mdash; a gift from her grandmother. When it breaks, she expects it to be thrown away. Instead, her grandmother teaches her kintsugi: filling the cracks with gold, making what broke more beautiful than it was before.</p>
-
-        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.8;color:var(--mid);margin-bottom:20px;">Then Naya asks the question the whole book was building toward: <em style="color:var(--rust);">"What about when I break? Is there gold for me too?"</em></p>
-
-        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.8;color:var(--mid);margin-bottom:32px;">This is the same philosophy that runs through everything built here &mdash; that the breaking is part of the story, and the story is worth keeping. Written for children. And for anyone who needed to hear it sooner.</p>
-
-        <!-- Kintsugi quote -->
-        <div style="border-left:3px solid var(--blush);padding:4px 0 4px 20px;margin-bottom:32px;">
-          <p style="font-family:'Playfair Display',serif;font-size:19px;font-style:italic;color:var(--rust);line-height:1.5;margin:0;">Every crack tells a story.<br>Every repair shines with strength.</p>
-        </div>
-
-        <!-- CTA buttons -->
-        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-          <a href="https://selahpractice.ca/#contact"
-             style="display:inline-block;background:var(--deep);color:var(--parchment);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;padding:14px 24px;text-decoration:none;transition:background 0.2s;"
-             onmouseover="this.style.background='var(--rust)'"
-             onmouseout="this.style.background='var(--deep)'">
-            Notify Me When Available
-          </a>
-          <span style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">Coming Soon &nbsp;&middot;&nbsp; Ages 6&ndash;9</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom note -->
-    <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;gap:32px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;">
-        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;">Also For</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted);font-style:italic;line-height:1.6;">Therapists &amp; social workers who work with children &nbsp;&middot;&nbsp; Teachers and school counsellors &nbsp;&middot;&nbsp; Anyone who wants to give the Wrestling Beautifully framework to a child they love</div>
-      </div>
-      <div style="flex:1;min-width:200px;">
-        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:6px;">Themes</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted);font-style:italic;line-height:1.6;">You are enough even when you feel broken &nbsp;&middot;&nbsp; It is okay to need help &nbsp;&middot;&nbsp; Hard things can make you stronger</div>
-      </div>
-    </div>
-
-  </div>
+<section class="book-hero">
+  <span class="section-eyebrow">Selah Practice &nbsp;·&nbsp; A Kintsugi Story for Children</span>
+  <h1>The Cracks That Shine</h1>
+  <p class="sub">by Pennye Eshetu &nbsp;·&nbsp; for ages 6&ndash;9, and anyone who needed it sooner</p>
 </section>
+<div class="book-wrap">
 
-
-
-
-
-<footer>
-  <div class="footer-logo">Selah Practice</div>
-  <div class="footer-links">
-    <a href="https://selahpractice.ca/">Home</a>
-    <a href="https://selahpractice.ca/#contact">Contact</a>
-    <a href="https://www.instagram.com/selahpractice/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Selah Studio Shop</a>
+<div class="bkv" id="bkv">
+  <div class="bkv-frame">
+    <img id="bkvImg" src="naya-whole.webp" alt="Naya and her grandmother with the bowl">
+    <div class="bkv-textpage" id="bkvText"><p id="bkvTextP"></p></div>
   </div>
-  <div class="footer-copy">© 2026 Selah Practice · All rights reserved · Built with intentionality</div>
-</footer>
+  <p class="bkv-caption" id="bkvCap"></p>
+  <div class="bkv-controls">
+    <button class="bkv-btn" id="bkvPrev" onclick="bkvGo(-1)">&#8592; Back</button>
+    <div class="bkv-dots" id="bkvDots"></div>
+    <button class="bkv-btn" id="bkvNext" onclick="bkvGo(1)">Next &#8594;</button>
+  </div>
+  <div class="bkv-count" id="bkvCount"></div>
+</div>
+
+  <div style="text-align:center;margin-top:44px;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--muted);">The full book is being finished now. Leave your email and you'll hear first.</p>
+    <a href="https://selahpractice.ca/#contact" style="display:inline-block;margin-top:18px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;background:var(--deep);color:var(--parchment);padding:15px 30px;text-decoration:none;">Notify Me</a>
+    <div style="margin-top:26px;"><a href="https://selahpractice.ca/" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);text-decoration:none;">&#8592; Back to Selah Practice</a></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var pages = [
+    {img:'naya-whole.webp', cap:'Naya had a favourite bowl. Her grandmother made it with her own two hands, and Naya carried it everywhere.'},
+    {img:'naya-broken.webp', cap:'One morning, the bowl slipped. Crack. Naya was sure it was finished. \u201CBroken things get thrown away,\u201D she whispered.'},
+    {img:'mending-gold.webp', cap:'But Grandmother gathered every piece. \u201CWatch,\u201D she said. And with gold and patience, she began to mend what Naya thought was lost.'},
+    {text:'\u201CGrandmother,\u201D Naya asked, \u201Cwhat about when I break? Is there gold for me too?\u201D', cap:''},
+    {img:'naya-shine.webp', cap:'\u201COh, my love,\u201D said Grandmother. \u201CEspecially then.\u201D And the bowl, and Naya, shone in a way they never had before.'},
+    {text:'Every crack tells a story. Every repair shines with strength.', cap:'The Cracks That Shine \u2014 a preview. The full book is coming soon.'}
+  ];
+  var i = 0, img = document.getElementById('bkvImg'), cap = document.getElementById('bkvCap'),
+      txt = document.getElementById('bkvText'), txtP = document.getElementById('bkvTextP'),
+      prev = document.getElementById('bkvPrev'), next = document.getElementById('bkvNext'),
+      dots = document.getElementById('bkvDots'), count = document.getElementById('bkvCount');
+  if (!img) return;
+  pages.forEach(function(){ var d = document.createElement('div'); d.className = 'bkv-dot'; dots.appendChild(d); });
+  function render(){
+    var p = pages[i];
+    cap.style.opacity = 0;
+    setTimeout(function(){ cap.textContent = p.cap || ''; cap.style.opacity = 1; }, 200);
+    if (p.text) { img.classList.add('fading'); txtP.textContent = p.text; txt.style.display = 'flex'; }
+    else { txt.style.display = 'none'; img.classList.add('fading');
+      setTimeout(function(){ img.src = p.img; img.onload = function(){ img.classList.remove('fading'); }; setTimeout(function(){ img.classList.remove('fading'); }, 350); }, 200); }
+    prev.disabled = (i === 0); next.disabled = (i === pages.length - 1);
+    count.textContent = 'Page ' + (i + 1) + ' of ' + pages.length;
+    Array.prototype.forEach.call(dots.children, function(d, j){ d.className = 'bkv-dot' + (j === i ? ' on' : ''); });
+  }
+  window.bkvGo = function(dir){ var n = i + dir; if (n < 0 || n >= pages.length) return; i = n; render(); };
+  document.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') bkvGo(1); if (e.key === 'ArrowLeft') bkvGo(-1); });
+  var sx = null, frame = document.querySelector('.bkv-frame');
+  frame.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  frame.addEventListener('touchend', function(e){ if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 42) bkvGo(dx < 0 ? 1 : -1); sx = null; }, {passive:true});
+  cap.textContent = pages[0].cap; render();
+})();
+</script>
+
 </body>
 </html>
