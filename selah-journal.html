@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | Selah Practice</title><meta name="description" content="The Selah Journal — two series, standalone reflections, the Selah Letters, and poetry. By Peniel Eshetu.">
+<link rel="icon" href="selah-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ef;--card:#fffdf8;--cream:#f5eee0;--slate:#4a3423;--deep:#2e1f13;--ink:#38302a;--body:#5c554b;--muted:#96887a;--sand:#e7dcc8;--amber:#b07d35;--sage:#77815f;--radius:14px;--shadow:0 10px 30px rgba(74,52,35,.08)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}.wrap-wide{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:var(--slate)}img{max-width:100%}
+.script{font-family:'La Belle Aurore',cursive;color:var(--slate)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+header img.logo{height:46px;width:auto}
+nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14.5px;color:var(--slate)}
+nav a.navbtn{border:1.5px solid var(--slate);padding:9px 20px;border-radius:99px;font-weight:500}
+@media(max-width:760px){nav a:not(.navbtn){display:none}}
+.hero{padding:96px 0 24px;text-align:center}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);font-weight:500}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:500;color:var(--deep);line-height:1.15;margin-top:18px}
+@media(max-width:560px){.hero h1{font-size:38px}}
+.hero p{max-width:560px;margin:20px auto 0;color:var(--body);font-size:18px;font-weight:300}
+.step{padding:72px 0 8px}
+.step .num{font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--amber);opacity:.55;line-height:1}
+.step h2{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:var(--deep);line-height:1.2;margin-top:14px}
+.step p{margin-top:12px;color:var(--body);font-weight:300;max-width:560px}
+.rows{margin-top:28px;border-top:1px solid var(--sand)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 4px;border-bottom:1px solid var(--sand);text-decoration:none}
+.row:hover{background:var(--card)}
+.row .t{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--deep)}
+.row .d{display:block;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:var(--muted);margin-top:2px}
+.row .arr{color:var(--amber);font-size:18px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.grid{grid-template-columns:1fr}}
+.product{background:var(--card);border:1px solid var(--sand);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.product .ph{aspect-ratio:1/1;overflow:hidden;background:var(--cream)}
+.product .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.product .pb{padding:22px;display:flex;flex-direction:column;gap:7px;flex:1}
+.product h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:var(--deep);line-height:1.25}
+.product p{color:var(--body);font-size:14.5px;font-weight:300;flex:1;margin:0;max-width:none}
+.product .row2{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding:0;border:none}
+.price{font-size:17px;font-weight:500;color:var(--deep)}.price small{font-size:12px;color:var(--muted);letter-spacing:1px}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;font-size:14.5px;font-weight:500;text-decoration:none;border:1.5px solid var(--slate);background:var(--slate);color:#f6f1e8}
+.btn.ghost{background:transparent;color:var(--slate)}
+.tag{display:inline-block;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 13px;border-radius:99px;background:#f7efe0;color:var(--amber);border:1px solid #e8dcc2}
+.cta{padding:96px 0 104px;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--deep)}
+.cta p{max-width:520px;margin:14px auto 28px;color:var(--body);font-weight:300}
+.flip{margin-top:32px;background:var(--card);border:1px solid var(--sand);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;text-align:center}
+.flip img{border-radius:8px;max-height:520px;width:auto;margin:0 auto;display:block}
+.flip .cap{margin-top:14px;color:var(--muted);font-size:14px}
+.flip .btns{margin-top:14px;display:flex;gap:10px;justify-content:center}
+.flip button{padding:10px 22px;border-radius:99px;border:1.5px solid var(--slate);background:transparent;color:var(--slate);font-family:inherit;font-size:14px;cursor:pointer}
+footer{background:#211507;color:#c9b99a;padding:64px 0 44px;text-align:center}
+footer img{height:64px;width:auto;margin:0 auto}
+footer .flinks{margin-top:26px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+footer .flinks a{color:#ece1cb;text-decoration:none;font-size:14.5px}
+footer .disc{max-width:680px;margin:30px auto 0;font-size:13px;line-height:1.7;color:#a08b6d}
+footer .small{margin-top:18px;font-size:13px;color:#8a755a}
+</style></head><body><header><div class="wrap-wide header-in"><a href="index.html"><img class="logo" src="selah-logo.svg" alt="Selah Practice"></a>
+<nav><a href="index.html">Home</a><a href="selah-childrens-book.html">Book</a><a href="selah-journal.html">Journal</a><a href="selah-studio-store.html">Studio</a><a href="selah-checkup.html">Resources</a><a class="navbtn" href="index.html#contact">Join the Waitlist</a></nav></div></header>
+<div class="hero"><div class="wrap"><div class="script" style="font-size:34px">the journal</div>
+<h1>Writing for the wrestling</h1>
+<p>Four rooms. Pick one, start at the top, read slowly.</p></div></div>
+<div class="wrap">
+<div class="step"><div class="num">01</div><h2>Series</h2><p>Two series, written to be read in order.</p><div class="rows"><a class="row" href="selah-series-01-i-wonder-who-id-be.html"><span><span class="t">She Who Always Endures — the series</span><span class="d">Six parts, in order. Start at Part 1.</span></span><span class="arr">→</span></a><a class="row" href="selah-series-01-i-wonder-who-id-be.html"><span><span class="t">Part 1 · I Wonder Who I'd Be</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-series-02-the-biology-of-always-being-st.html"><span><span class="t">Part 2 · The Biology of Always Being Strong</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-series-03-what-the-body-keeps-holding.html"><span><span class="t">Part 3 · What the Body Keeps Holding</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-series-04-god-wastes-nothing.html"><span><span class="t">Part 4 · God Wastes Nothing</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-series-05-when-strength-stops-working.html"><span><span class="t">Part 5 · When Strength Stops Working</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-series-06-a-life-gentle-enough-for-her-t.html"><span><span class="t">Part 6 · A Life Gentle Enough for Her to Come Back</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-ground-01-god-sees-you-in-the-dark.html"><span><span class="t">When the Ground Gives Way — the series</span><span class="d">Five parts, in order. Start at Part 1.</span></span><span class="arr">→</span></a><a class="row" href="selah-ground-01-god-sees-you-in-the-dark.html"><span><span class="t">Part 1 · God Sees You in the Dark</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-ground-02-what-to-do-while-you-wait.html"><span><span class="t">Part 2 · What to Do While You Wait</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-ground-03-faith-that-moves-first.html"><span><span class="t">Part 3 · Faith That Moves First</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-ground-04-the-valley-has-a-table.html"><span><span class="t">Part 4 · The Valley Has a Table</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-ground-05-the-source-that-cannot-be-taken.html"><span><span class="t">Part 5 · The Source That Cannot Be Taken</span><span class="d"></span></span><span class="arr">→</span></a></div></div>
+<div class="step"><div class="num">02</div><h2>Reflections</h2><p>Standalone pieces. Any one of them stands on its own.</p><div class="rows"><a class="row" href="selah-blog-what-is-selah.html"><span><span class="t">What Is Selah?</span><span class="d">The foundational piece.</span></span><span class="arr">→</span></a><a class="row" href="selah-blog-who-am-i.html"><span><span class="t">Who Am I, Actually</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-jacob-limped.html"><span><span class="t">Jacob Limped. And He Was Still Blessed.</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-wounded-healer.html"><span><span class="t">The Wounded Healer Isn't a Metaphor</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-feelings-biochemical.html"><span><span class="t">Your Feelings Are Biochemical</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-cortisol.html"><span><span class="t">Why You're Exhausted Even After a Full Night's Sleep</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-acanthosis-nigricans.html"><span><span class="t">The Acanthosis Nigricans No One Explained to You</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-spiritual-dryness.html"><span><span class="t">When the Worship Doesn't Move You Anymore</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-blog-trust-god-with-what-you-carried.html"><span><span class="t">Trust God With What You Carried</span><span class="d">1 Peter 5:7</span></span><span class="arr">→</span></a><a class="row" href="selah-blog-repairs-shine.html"><span><span class="t">Repairs Shine: Kintsugi and the Science of Sleep</span><span class="d"></span></span><span class="arr">→</span></a></div></div>
+<div class="step"><div class="num">03</div><h2>Letters</h2><p>The Selah Letters — Scripture, psychology, and hope in one movement.</p><div class="rows"><a class="row" href="selah-welcome-email.html"><span><span class="t">Start with the welcome letter</span><span class="d">Feet Like the Deer's — Habakkuk 3:19</span></span><span class="arr">→</span></a><a class="row" href="selah-letter-01.html"><span><span class="t">Letter 01 · Selah Means Stop</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-02.html"><span><span class="t">Letter 02 · The God Who Sees in the Dark</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-03.html"><span><span class="t">Letter 03 · What the Psalms Know About Your Nervous System</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-04.html"><span><span class="t">Letter 04 · Cast It Like You Mean It</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-05.html"><span><span class="t">Letter 05 · Sleep Is a Repair Shift</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-06.html"><span><span class="t">Letter 06 · The Yet</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-07.html"><span><span class="t">Letter 07 · Gold Goes in the Cracks</span><span class="d"></span></span><span class="arr">→</span></a><a class="row" href="selah-letter-08.html"><span><span class="t">Letter 08 · A Life Gentle Enough</span><span class="d"></span></span><span class="arr">→</span></a></div></div>
+<div class="step"><div class="num">04</div><h2>Poetry</h2><p>One collection. Nothing else competing.</p><div class="rows"><a class="row" href="selah-poetry-collection.html"><span><span class="t">Yale Lefat Waga — A Poetry Collection</span><span class="d">Poetry by Peniel Eshetu.</span></span><span class="arr">→</span></a></div></div>
+</div>
+<div class="cta"><div class="wrap"><h2>Get the Letter each week</h2><p>One quiet letter, free. Join on the home page.</p><a class="btn" href="index.html#contact">Join the Letter</a></div></div>
+<footer><div class="wrap-wide"><img src="selah-logo-dark.svg" alt="Selah Practice">
+<div class="flinks"><a href="index.html">Home</a><a href="selah-childrens-book.html">Book</a><a href="selah-journal.html">Journal</a><a href="selah-studio-store.html">Studio</a><a href="selah-checkup.html">Resources</a><a href="selah-privacy-policy.html">Privacy</a></div>
+<p class="disc">Selah Practice is a practice in formation. Peniel Eshetu is an MSW candidate and health educator — not yet a registered social worker or therapist — and nothing on this site is therapy, counselling, or medical advice. The resources here are educational and supportive. If you are in crisis, call or text 988 (Canada &amp; US) or go to your nearest emergency department.</p>
+<p class="small">Every crack tells a story. Every repair shines with strength. · Winnipeg, Manitoba · © 2026 Selah Practice</p></div></footer></body></html>
