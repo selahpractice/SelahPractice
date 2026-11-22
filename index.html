@@ -3546,6 +3546,8 @@ body.force-mobile .view-toggle {
     <a href="javascript:void(0)" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How It Works</a>
     <a href="javascript:void(0)" onclick="document.getElementById('resources').scrollIntoView({behavior:'smooth'})">Resources</a>
     <a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
+    <a href="https://www.instagram.com/selahpractice/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://payhip.com/selahstudio" target="_blank" rel="noopener">Selah Studio Shop</a>
   </div>
   <div class="footer-copy">© 2026 Selah Practice · All rights reserved · Built with intentionality</div>
 </footer>
@@ -4588,9 +4590,16 @@ document.addEventListener('DOMContentLoaded', function() {
       email.placeholder = 'Please enter a valid email';
       return;
     }
-    // Store email (in real deployment this would POST to Mailchimp)
+    // Send the email to Selah Practice (FormSubmit) and keep it for results.
     var userEmail = email.value.trim();
     window._checkupEmail = userEmail;
+    try {
+      fetch('https://formsubmit.co/ajax/hello@selahpractice.ca', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: userEmail, _subject: 'Selah Check-Up completed — new subscriber', source: 'Check-Up results gate', _captcha: 'false', _template: 'table' })
+      });
+    } catch (e) { /* never block the results on a network error */ }
 
     // Show loading then render
     document.getElementById('results').innerHTML = '<div class="loading">Preparing your protocol...</div>';
@@ -4807,5 +4816,75 @@ document.addEventListener('DOMContentLoaded', function() {
   </button>
 </div>
 
+
+<script>
+// Selah Practice forms — wired 2026-11-22.
+// Submissions are delivered by FormSubmit to hello@selahpractice.ca.
+// NOTE: FormSubmit sends a one-time activation email to that inbox the first
+// time a form is submitted; the site owner must click "Activate" in it once.
+var SELAH_FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@selahpractice.ca';
+function selahPost(payload) {
+  payload._captcha = 'false';
+  payload._template = 'table';
+  return fetch(SELAH_FORM_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+}
+function selahFormError(btn, msg) {
+  btn.disabled = false;
+  btn.textContent = btn.getAttribute('data-label') || 'Try Again';
+  var note = document.createElement('div');
+  note.style.cssText = "font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--rust);margin-top:10px;";
+  note.textContent = msg;
+  btn.parentNode.appendChild(note);
+}
+function submitMainEmail() {
+  var input = document.getElementById('main-email');
+  var btn = document.querySelector('#main-email-form .form-submit');
+  if (!input || !input.value || !input.value.includes('@')) {
+    if (input) { input.style.borderColor = 'var(--rust)'; input.placeholder = 'Please enter a valid email'; input.focus(); }
+    return;
+  }
+  btn.setAttribute('data-label', btn.textContent);
+  btn.disabled = true; btn.textContent = 'Joining...';
+  selahPost({ email: input.value.trim(), _subject: 'New Selah Letter subscriber — selahpractice.ca', source: 'Main email list (Connect section)' })
+    .then(function(r) { if (!r.ok) throw new Error('send failed'); return r.json(); })
+    .then(function() {
+      document.getElementById('main-email-form').style.display = 'none';
+      document.getElementById('main-email-success').style.display = 'block';
+    })
+    .catch(function() { selahFormError(btn, 'Something went wrong. Please email hello@selahpractice.ca directly.'); });
+}
+function submitIntake() {
+  var name = document.getElementById('in-name');
+  var email = document.getElementById('in-email');
+  var btn = document.querySelector('#intake-form .form-submit');
+  if (!email || !email.value || !email.value.includes('@')) {
+    if (email) { email.style.borderColor = 'var(--rust)'; email.placeholder = 'Please enter a valid email'; email.focus(); }
+    return;
+  }
+  btn.setAttribute('data-label', btn.textContent);
+  btn.disabled = true; btn.textContent = 'Sending...';
+  selahPost({
+    name: name ? name.value.trim() : '',
+    email: email.value.trim(),
+    carrying: (document.getElementById('in-carrying') || {}).value || '',
+    support_requested: (document.getElementById('in-support') || {}).value || '',
+    how_found: (document.getElementById('in-referral') || {}).value || '',
+    _subject: 'New intake enquiry — Selah Practice',
+    _replyto: email.value.trim(),
+    source: 'Intake & Enquiry form (Connect section)'
+  })
+    .then(function(r) { if (!r.ok) throw new Error('send failed'); return r.json(); })
+    .then(function() {
+      document.getElementById('intake-form').style.display = 'none';
+      var s = document.getElementById('intake-success');
+      s.style.display = 'block';
+    })
+    .catch(function() { selahFormError(btn, 'Something went wrong. Please email hello@selahpractice.ca directly.'); });
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selahpractice.ca/sitemap.xml
