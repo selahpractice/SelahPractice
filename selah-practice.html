@@ -58,6 +58,18 @@ nav a.navbtn{border:1.5px solid var(--slate);padding:9px 20px;border-radius:99px
 .holdon blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px;color:var(--deep);margin-top:12px}
 .holdon .href{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);margin-top:8px}
 .holdon p{color:var(--body);font-weight:300;margin-top:14px;max-width:520px;margin-left:auto;margin-right:auto}
+.holdbtn{position:relative;width:168px;height:168px;margin:30px auto 0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:none;user-select:none;-webkit-user-select:none}
+.holdbtn svg{transform:rotate(-90deg)}
+.holdbtn .ring-bg{stroke:var(--sand)}
+.holdbtn .ring-fg{stroke:#d9a84e}
+.holdbtn .core{position:absolute;inset:22px;border-radius:50%;background:var(--slate);color:#f6f1e8;display:flex;align-items:center;justify-content:center;font-family:'La Belle Aurore',cursive;font-size:27px;padding:12px;text-align:center;line-height:1.15;transition:transform .3s ease,background .4s ease}
+.holdbtn.holding .core{transform:scale(.94)}
+.holdbtn.done .core{background:var(--amber)}
+.holdhint{margin-top:16px;color:var(--muted);font-size:14.5px}
+.blessing{max-height:0;opacity:0;overflow:hidden;transition:max-height 1.1s ease,opacity 1.1s ease,margin 1.1s ease}
+.blessing.show{max-height:300px;opacity:1;margin-top:28px}
+.blessing blockquote{font-size:23px}
+@media (prefers-reduced-motion: reduce){.blessing{transition:none}}
 .lineage{margin-top:44px;text-align:center;color:var(--muted);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:18px}
 .role{margin-top:10px;color:var(--amber);font-size:14px;letter-spacing:2px;text-transform:uppercase;text-align:center}
 .chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
@@ -114,7 +126,16 @@ footer .small{margin-top:18px;font-size:13px;color:#8a755a}
         <div class="script">hold on</div>
         <blockquote>&ldquo;I will not let go unless you bless me.&rdquo;</blockquote>
         <div class="href">Genesis 32:26 · Jacob</div>
-        <p>&ldquo;Then he blessed him there.&rdquo; (Genesis 32:29) That is the whole practice in one gesture: not letting go is a discipline, and the body can learn it.</p>
+        <div class="holdbtn" id="holdBtn" role="button" aria-label="Press and hold, like Jacob held on">
+          <svg width="168" height="168" viewBox="0 0 168 168"><circle class="ring-bg" cx="84" cy="84" r="78" fill="none" stroke-width="5"/><circle class="ring-fg" id="ringFg" cx="84" cy="84" r="78" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="490" stroke-dashoffset="490"/></svg>
+          <div class="core">hold on</div>
+        </div>
+        <p class="holdhint" id="holdHint">Press and hold the circle \u2014 the way Jacob held on.</p>
+        <div class="blessing" id="blessing">
+          <blockquote>&ldquo;Then he blessed him there.&rdquo;</blockquote>
+          <div class="href">Genesis 32:29</div>
+          <p>That is the whole practice in one gesture: not letting go is a discipline, and the body can learn it.</p>
+        </div>
       </div>
       <p class="lineage">Rooted in Scripture alone — the pattern is as old as Peniel: God meets the whole person in the wrestling, body, mind, soul, and spirit together.</p>
     </div>
@@ -145,5 +166,24 @@ footer .small{margin-top:18px;font-size:13px;color:#8a755a}
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var btn=document.getElementById('holdBtn'), ring=document.getElementById('ringFg'),
+      hint=document.getElementById('holdHint'), blessing=document.getElementById('blessing');
+  if(!btn) return;
+  var CIRC=490, DUR=2600, start=null, raf=null, done=false;
+  function stepFn(ts){ if(!start) start=ts; var pr=Math.min(1,(ts-start)/DUR);
+    ring.style.strokeDashoffset=String(CIRC*(1-pr)); if(pr>=1){ complete(); return; } raf=requestAnimationFrame(stepFn); }
+  function begin(e){ if(done) return; e.preventDefault(); btn.classList.add('holding'); start=null; raf=requestAnimationFrame(stepFn); }
+  function release(){ if(done) return; btn.classList.remove('holding'); if(raf) cancelAnimationFrame(raf); ring.style.strokeDashoffset=String(CIRC); }
+  function complete(){ done=true; btn.classList.remove('holding'); btn.classList.add('done'); ring.style.strokeDashoffset='0';
+    hint.textContent='You held on.'; blessing.classList.add('show'); }
+  btn.addEventListener('pointerdown',begin); btn.addEventListener('pointerup',release);
+  btn.addEventListener('pointerleave',release); btn.addEventListener('pointercancel',release);
+  btn.addEventListener('keydown',function(e){ if(e.key===' '||e.key==='Enter'){ begin(e); } });
+  btn.addEventListener('keyup',release); btn.setAttribute('tabindex','0');
+})();
+</script>
 </body>
 </html>
