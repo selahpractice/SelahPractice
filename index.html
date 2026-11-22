@@ -2692,8 +2692,8 @@ section{scroll-margin-top:70px;}
   <div class="hero-glow"></div>
   <div class="inner">
     <span class="section-eyebrow" style="color:var(--amber);">Selah Practice &nbsp;·&nbsp; Winnipeg</span>
-    <h1>Pause. Breathe.<br><em>Be whole.</em></h1>
-    <p class="lede">The Selah Check-Up — an integrative assessment for the whole person: body, mind, spirit, and the systems you're holding. The science and the faith of healing, in one quiet place.</p>
+    <h1>Your labs are normal.<br><em>Your body is not lying.</em></h1>
+    <p class="lede">Pause. Breathe. The Selah Check-Up is an integrative assessment for the whole person: body, mind, spirit, and the systems you're holding. The science and the faith of healing, in one quiet place.</p>
     <div class="breath-calm" aria-hidden="true">
       <div class="ring"></div>
       <div class="word" id="breathWord2">breathe in</div>
@@ -2709,6 +2709,22 @@ section{scroll-margin-top:70px;}
     <div id="hero-email-thanks" style="display:none;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--warm);margin-top:12px;">You are on the list. Watch your inbox.</div>
   </div>
 </section>
+
+
+<!-- PROBLEM BANNER (spec) -->
+<div class="problem-strip" aria-hidden="true">
+  <div class="problem-track">
+    <span>Wired but tired</span><i>✦</i><span>Brain fog</span><i>✦</i><span>Cycle chaos after the pill</span><i>✦</i><span>3 p.m. crashes</span><i>✦</i><span>Anxiety in your body, not just your mind</span><i>✦</i><span>Gut issues no one connects</span><i>✦</i><span>Hair, skin, sleep — all off</span><i>✦</i><span>&ldquo;Your labs are fine&rdquo;</span><i>✦</i>
+    <span>Wired but tired</span><i>✦</i><span>Brain fog</span><i>✦</i><span>Cycle chaos after the pill</span><i>✦</i><span>3 p.m. crashes</span><i>✦</i><span>Anxiety in your body, not just your mind</span><i>✦</i><span>Gut issues no one connects</span><i>✦</i><span>Hair, skin, sleep — all off</span><i>✦</i><span>&ldquo;Your labs are fine&rdquo;</span><i>✦</i>
+  </div>
+</div>
+<style>
+.problem-strip{background:var(--rust);overflow:hidden;padding:15px 0;border-top:1px solid rgba(0,0,0,.2);border-bottom:1px solid rgba(0,0,0,.2);}
+.problem-track{display:inline-flex;gap:26px;white-space:nowrap;animation:stripMove 46s linear infinite;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--parchment);padding-left:26px;}
+.problem-track i{font-style:normal;color:var(--warm);font-size:11px;align-self:center;}
+@keyframes stripMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.problem-track{animation:none;}}
+</style>
 
 <!-- WHAT IT IS -->
 <section class="section-what" id="what">
@@ -2979,6 +2995,67 @@ section{scroll-margin-top:70px;}
   <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2.5vw,22px);font-style:italic;color:rgba(255,255,255,0.8);line-height:1.5;">Every crack tells a story. Every repair shines with strength.</p>
   <div class="enc-sub" style="margin-top:12px;">— Selah Practice</div>
 </div>
+
+
+<!-- FIVE CLINICAL PILLARS (spec) -->
+<section class="section-pillars" id="pillars" style="background:var(--deep);padding:110px 24px;position:relative;">
+  <div style="max-width:1060px;margin:0 auto;">
+    <div class="section-header">
+      <span class="section-eyebrow">What We Address</span>
+      <h2 class="section-title" style="color:var(--parchment);">Five doors into<br><em>the same house.</em></h2>
+      <p class="section-sub" style="color:var(--warm);">Selah Practice works where these meet — because in a real body, they were never separate.</p>
+    </div>
+    <div class="pillars-grid">
+      <a class="pillar-card" href="javascript:void(0)" onclick="openCheckup()">
+        <div class="pillar-num">01</div>
+        <h3>Hormonal Health &amp; HPA Axis</h3>
+        <p>Post-pill recovery, cycle regulation, cortisol dysregulation, thyroid-adjacent symptoms, perimenopause.</p>
+        <span class="pillar-go">Start with the Check-Up →</span>
+      </a>
+      <a class="pillar-card" href="javascript:void(0)" onclick="openCheckup()">
+        <div class="pillar-num">02</div>
+        <h3>Gut-Brain-Immune Connection</h3>
+        <p>PNI, gut health, inflammation, and the microbiome-mood axis — where body and mind share one conversation.</p>
+        <span class="pillar-go">Start with the Check-Up →</span>
+      </a>
+      <a class="pillar-card" href="javascript:void(0)" onclick="openCheckup()">
+        <div class="pillar-num">03</div>
+        <h3>Chronic Fatigue &amp; Nervous System</h3>
+        <p>Allostatic load, HPA burnout, and the wired-but-tired pattern that rest alone doesn't fix.</p>
+        <span class="pillar-go">Start with the Check-Up →</span>
+      </a>
+      <a class="pillar-card" href="javascript:void(0)" onclick="openCheckup()">
+        <div class="pillar-num">04</div>
+        <h3>Mental Health + Chronic Illness</h3>
+        <p>Anxiety and depression that are physiological, and the identity fracture that comes with being ill for a long time.</p>
+        <span class="pillar-go">Start with the Check-Up →</span>
+      </a>
+      <a class="pillar-card" href="javascript:void(0)" onclick="openCheckup()">
+        <div class="pillar-num">05</div>
+        <h3>Faith-Integrated Healing</h3>
+        <p>For the woman whose church says pray harder and whose doctor says her labs are fine. Both are missing something.</p>
+        <span class="pillar-go">Start with the Check-Up →</span>
+      </a>
+    </div>
+    <div class="proof-strip">
+      <div class="proof-item"><div class="proof-num">90%</div><div class="proof-label">of serotonin is made in the gut</div></div>
+      <div class="proof-item"><div class="proof-num">3–12 mo</div><div class="proof-label">typical post-pill hormone recovery window</div></div>
+      <div class="proof-item"><div class="proof-num">74×</div><div class="proof-label">&ldquo;Selah&rdquo; appears in the Psalms — pause, lift, look again</div></div>
+    </div>
+  </div>
+</section>
+<style>
+.pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:52px;}
+.pillar-card{display:block;background:rgba(246,241,232,.04);border:1px solid rgba(201,185,154,.16);padding:34px 30px;text-decoration:none;transition:all .4s ease;}
+.pillar-card:hover{border-color:var(--amber);background:rgba(246,241,232,.07);transform:translateY(-4px);}
+.pillar-num{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--amber);margin-bottom:16px;}
+.pillar-card h3{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:23px;color:var(--parchment);line-height:1.25;margin-bottom:12px;}
+.pillar-card p{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.6;color:var(--warm);}
+.pillar-go{display:inline-block;margin-top:18px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blush);}
+.proof-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:56px;padding-top:44px;border-top:1px solid rgba(201,185,154,.16);text-align:center;}
+.proof-num{font-family:'Playfair Display',serif;font-style:italic;font-weight:300;font-size:42px;color:var(--amber);}
+.proof-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--warm);margin-top:8px;line-height:1.7;}
+</style>
 
 <!-- BLOG -->
 <section class="section-blog" id="blog">
@@ -3530,6 +3607,23 @@ section{scroll-margin-top:70px;}
 </section>
 
 <!-- CONTACT + WAITLIST -->
+
+<!-- SELAH STUDIO DOOR (spec) -->
+<section class="section-studio-door" id="studio" style="padding:0;border-top:1px solid var(--border);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:340px;" class="studio-door-grid">
+    <div style="background:var(--deep);padding:70px 48px;display:flex;flex-direction:column;justify-content:center;">
+      <span class="section-eyebrow">The Maker Arm</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:36px;color:var(--parchment);margin:14px 0 16px;line-height:1.2;">Selah Studio</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.7;color:var(--warm);max-width:400px;">Soaps, perfumes, and oils — small, handmade doors into the same philosophy. One honest door, and people discover the depth over time.</p>
+    </div>
+    <div style="background:var(--parchment);padding:70px 48px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.6;color:var(--mid);max-width:400px;">&ldquo;Every crack tells a story. Every repair shines with strength.&rdquo;</p>
+      <a href="https://payhip.com/selahstudio" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;background:var(--deep);color:var(--parchment);padding:16px 32px;text-decoration:none;">Enter the Studio →</a>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:760px){.studio-door-grid{grid-template-columns:1fr !important;}}</style>
+
 <section class="section-contact" id="contact">
   <div class="section-inner">
     <div class="section-label" style="color:var(--warm);">Connect</div>
