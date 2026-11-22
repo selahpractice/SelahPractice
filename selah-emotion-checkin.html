@@ -83,6 +83,13 @@ textarea{width:100%;min-height:130px;border:1px solid var(--border);background:#
 .reminder{background:var(--deep);color:var(--parchment);padding:34px 30px;text-align:center;margin-top:28px;}
 .reminder p{font-family:'Playfair Display',serif;font-style:italic;font-size:21px;line-height:1.55;color:var(--parchment);}
 .reminder cite{display:block;margin-top:10px;font-family:'DM Mono',monospace;font-style:normal;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--warm);}
+.song{margin-top:28px;background:#fff;border:1px solid var(--border);padding:30px 28px;}
+.song h3{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:24px;color:var(--ink);text-align:center;}
+.song .song-sub{text-align:center;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+.song .vid{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:20px;background:var(--deep);}
+.song .vid iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.song .song-name{margin-top:14px;font-size:17px;font-style:italic;color:var(--mid);text-align:center;}
+.song .song-name b{font-style:normal;color:var(--rust);}
 
 </style>
 </head>
@@ -159,6 +166,14 @@ textarea{width:100%;min-height:130px;border:1px solid var(--border);background:#
       <li><strong>Prayer</strong> — not the polished kind. The honest sentence kind.</li>
     </ul>
     <div class="reminder"><p id="reminderText"></p><cite id="reminderCite"></cite></div>
+    <div class="song">
+      <h3>Stay a while — press play</h3>
+      <div class="song-sub">A song for this exact verse</div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/pHIcpCjz-cw" title="Even If — Anthony Evans and Naomi Raine" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <p class="song-name"><b>Even If</b> — Anthony Evans &amp; Naomi Raine. Even if the healing doesn't look like you chose — yet I will rejoice.</p>
+      <div class="vid" style="margin-top:26px;"><iframe src="https://www.youtube.com/embed/8HznXBBCdBE" title="Into the Sea (It's Gonna Be Ok) — Tasha Layton" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <p class="song-name"><b>Into the Sea (It's Gonna Be Ok)</b> — Tasha Layton. For when the ground beneath you crumbles and gives way.</p>
+    </div>
     <p style="margin-top:26px;"><button class="tbtn ghost" onclick="go(0)">Start again</button></p>
   </div>
 </div>
