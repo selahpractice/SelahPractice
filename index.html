@@ -2671,6 +2671,12 @@ section{scroll-margin-top:70px;}
 @media (prefers-reduced-motion: reduce){.hero-glow,.breath-calm .ring::after{animation:none;}.rv{opacity:1;transform:none;transition:none;}}
 </style>
 
+
+<style id="blog-visibility-fix">
+.blog-modal-body, .blog-modal-body p, .blog-modal-body li { color:#3a2a18 !important; opacity:1 !important; }
+.blog-card .blog-excerpt, .blog-featured .blog-excerpt { color:#5c4c38 !important; opacity:1 !important; }
+.blog-card .blog-title, .blog-featured .blog-title { color:#1e1409 !important; }
+</style>
 </head>
 <body>
 <nav class="selah-nav">
@@ -2706,7 +2712,7 @@ section{scroll-margin-top:70px;}
       <input type="email" id="hero-email" placeholder="your email &mdash; get the Selah Letter">
       <button onclick="submitHeroEmail()">Join</button>
     </div>
-    <div id="hero-email-thanks" style="display:none;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--warm);margin-top:12px;">You are on the list. Watch your inbox.</div>
+    <div id="hero-email-thanks" style="display:none;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--warm);margin-top:12px;">You are on the list. Your first letter is ready — no waiting for the inbox.<div style="margin-top:10px;"><a href="selah-welcome-email.html" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);">Read your first Selah Letter now →</a></div></div>
   </div>
 </section>
 
@@ -3065,7 +3071,15 @@ section{scroll-margin-top:70px;}
 
     <div class="blog-grid">
 
-      <div class="blog-featured" onclick="openBlog('cortisol')">
+      
+      <div class="blog-card" onclick="window.location.href='selah-emotion-checkin.html'" style="cursor:pointer;border-top:3px solid var(--amber);">
+        <div class="blog-category">Interactive Tool · Free</div>
+        <div class="blog-title">Inside the <em>Feeling</em></div>
+        <div class="blog-excerpt">A five-step Selah check-in: ground, name it, weigh it, trace it, let it speak. Built for the moment a feeling is louder than your thoughts.</div>
+        <div class="blog-meta">5 minutes · Grounding · Scripture-rooted</div>
+        <div class="blog-read-more">Begin the Check-In</div>
+      </div>
+      <div class="blog-featured" onclick="window.location.href='selah-blog-cortisol.html'" style="cursor:pointer;">
         <div>
           <div class="blog-category">HPA Axis · Stress Biology</div>
           <div class="blog-title">Why You're Exhausted Even After a Full Night's Sleep — <em>It's Not Laziness. It's Cortisol.</em></div>
@@ -3080,7 +3094,7 @@ section{scroll-margin-top:70px;}
         </div>
       </div>
 
-      <div class="blog-card" onclick="openBlog('pni')">
+      <div class="blog-card" onclick="window.location.href='selah-blog-feelings-biochemical.html'" style="cursor:pointer;">
         <div class="blog-category">Psychoneuroimmunology</div>
         <div class="blog-title">Your Feelings Are Biochemical — <em>And That's Not Reductive, It's Actually Good News</em></div>
         <div class="blog-excerpt">PNI explains why grief makes you sick, why loneliness ages you faster, and why church community is actually a health intervention.</div>
@@ -3088,7 +3102,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="openBlog('spiritualdryness')">
+      <div class="blog-card" onclick="window.location.href='selah-blog-spiritual-dryness.html'" style="cursor:pointer;">
         <div class="blog-category">Faith + Physiology</div>
         <div class="blog-title">When the Worship Doesn't Move You Anymore — <em>A Clinical and Spiritual Framework</em></div>
         <div class="blog-excerpt">Spiritual dryness has a neurobiology. This is what's happening in your brain — and why it's not a sign you've lost your faith.</div>
@@ -3096,7 +3110,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="openBlog('insulin')">
+      <div class="blog-card" onclick="window.location.href='selah-blog-acanthosis-nigricans.html'" style="cursor:pointer;">
         <div class="blog-category">Metabolic Health · Women</div>
         <div class="blog-title">The Acanthosis Nigricans No One Explained to You — <em>What Your Skin Is Saying About Your Hormones</em></div>
         <div class="blog-excerpt">That darkening on your neck isn't a hygiene issue. It's your body writing a message in the only language it has left — and it's time someone translated it.</div>
@@ -3104,7 +3118,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="openBlog('woundedhealer')">
+      <div class="blog-card" onclick="window.location.href='selah-blog-wounded-healer.html'" style="cursor:pointer;">
         <div class="blog-category">Caregiver Wellness</div>
         <div class="blog-title">The Wounded Healer Isn't a Metaphor — <em>It's a Calling That Requires a Body</em></div>
         <div class="blog-excerpt">You chose this work because you've lived something. But the wound that called you in will eventually close the door — unless you tend it.</div>
@@ -3112,7 +3126,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="openBlog('whoami')" style="border-top:3px solid var(--blush);">
+      <div class="blog-card" onclick="window.location.href='selah-blog-who-am-i.html'" style="cursor:pointer;" style="border-top:3px solid var(--blush);">
         <div class="blog-category">Personal Essay - Founder Story</div>
         <div class="blog-title">Who Am I, Actually -- <em>A decade of symptoms, systems, and finding integrative care</em></div>
         <div class="blog-excerpt">Psoriasis. Gut issues. ADHD. Thyroid. Autoimmune. I lived it all in my twenties while the healthcare system told me everything looked fine. This is how I got here.</div>
@@ -3120,7 +3134,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-            <div class="blog-card" onclick="openBlog('wrestling')">
+            <div class="blog-card" onclick="window.location.href='selah-blog-jacob-limped.html'" style="cursor:pointer;">
         <div class="blog-category">Wrestling Beautifully</div>
         <div class="blog-title">Jacob Limped. And He Was Still Blessed. — <em>On Not Having to Be Whole Before You're Worthy</em></div>
         <div class="blog-excerpt">The wrestling match left a mark. That's the point. Transformation and wounding aren't opposites — they're the same event.</div>
@@ -3154,7 +3168,7 @@ section{scroll-margin-top:70px;}
           <button onclick="submitBlogEmail()"
             style="background:var(--deep);color:var(--parchment);border:none;padding:10px 18px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;">Join</button>
         </div>
-        <div id="blog-email-thanks" style="display:none;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--sage);margin-top:8px;">You are on the list. Watch your inbox.</div>
+        <div id="blog-email-thanks" style="display:none;font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--sage);margin-top:8px;">You are on the list. Your first letter is ready.<div style="margin-top:8px;"><a href="selah-welcome-email.html" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);">Read your first Selah Letter now →</a></div></div>
         <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:0.5;margin-top:8px;">One list. No spam. Unsubscribe any time.</div>
       </div>
     </div>
@@ -3341,7 +3355,7 @@ section{scroll-margin-top:70px;}
       </div>
 
       <!-- She Who Always Endures series -->
-      <div class="blog-card" onclick="window.open('selah-series-01-i-wonder-who-id-be.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-series-01-i-wonder-who-id-be.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">She Who Always Endures · Part 1 of 6</div>
         <div class="blog-title">I Wonder Who I'd Be — <em>If I Wasn't Always Enduring</em></div>
         <div class="blog-excerpt">There is a softer version of you somewhere. One who never had to be this tired, this guarded, this endlessly resilient. A series on the hidden cost of always being the strong one.</div>
@@ -3349,7 +3363,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Series</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-series-02-the-biology-of-always-being-st.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-series-02-the-biology-of-always-being-st.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">She Who Always Endures · Part 2 of 6</div>
         <div class="blog-title">The Biology of <em>Always Being Strong</em></div>
         <div class="blog-excerpt">Every act of endurance has a biological price tag. What chronic strength does to your HPA axis, your cortisol, and the nervous system that learned to stay ready.</div>
@@ -3357,7 +3371,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-series-06-a-life-gentle-enough-for-her-t.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-series-06-a-life-gentle-enough-for-her-t.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">She Who Always Endures · Part 6 of 6</div>
         <div class="blog-title">A Life Gentle Enough <em>For Her To Come Back</em></div>
         <div class="blog-excerpt">What the conditions for return actually look like — physiologically, relationally, spiritually. This is the closing piece.</div>
@@ -3366,7 +3380,7 @@ section{scroll-margin-top:70px;}
       </div>
 
       <!-- When the Ground Gives Way series -->
-      <div class="blog-card" onclick="window.open('selah-ground-01-god-sees-you-in-the-dark.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-ground-01-god-sees-you-in-the-dark.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">When the Ground Gives Way · Part 1 of 5</div>
         <div class="blog-title">God Sees You <em>in the Dark</em></div>
         <div class="blog-excerpt">When hopelessness feels like clarity — and what Scripture says about the seasons that will not lift. For those navigating chronic illness, grief, and sustained hardship.</div>
@@ -3374,7 +3388,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-ground-03-faith-that-moves-first.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-ground-03-faith-that-moves-first.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">When the Ground Gives Way · Part 3 of 5</div>
         <div class="blog-title">Faith That <em>Moves First</em></div>
         <div class="blog-excerpt">Why the walk of faith has always been action before feeling. Abraham left before he saw the land. The lepers were healed as they went. Scripture on moving before the evidence arrives.</div>
@@ -3382,7 +3396,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-ground-05-the-source-that-cannot-be-taken.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-ground-05-the-source-that-cannot-be-taken.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">When the Ground Gives Way · Part 5 of 5</div>
         <div class="blog-title">The Source That <em>Cannot Be Taken</em></div>
         <div class="blog-excerpt">On finding your worth in God alone. Jeremiah's tree. Habakkuk's yet. Yale lefat waga as the Gospel in Amharic. What it means to be rooted in something the world cannot move.</div>
@@ -3395,7 +3409,7 @@ section{scroll-margin-top:70px;}
         <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:24px;">Standalone Reflections</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-blog-what-is-selah.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-blog-what-is-selah.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">The Foundation</div>
         <div class="blog-title">What Is Selah — <em>And Why Does It Matter?</em></div>
         <div class="blog-excerpt">It appears 74 times in the Psalms and we still don't fully know what it means. That is exactly why it became the name of this practice. The whole philosophy in one piece.</div>
@@ -3403,7 +3417,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-blog-trust-god-with-what-you-carried.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-blog-trust-god-with-what-you-carried.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">Devotional</div>
         <div class="blog-title">Trust God With <em>What You've Carried</em></div>
         <div class="blog-excerpt">You have been carrying things that were never meant to be carried alone. A tender, compassionate reflection on 1 Peter 5:7, Isaiah 46:4, and the permission to finally set it down.</div>
@@ -3411,7 +3425,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-blog-repairs-shine.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-blog-repairs-shine.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">Kintsugi · Rest</div>
         <div class="blog-title">Your Repairs Shine With Strength — <em>Let Sleep Be a Sanctuary</em></div>
         <div class="blog-excerpt">The Japanese art of kintsugi fills broken pottery with gold. What the theology of repair means for your body, your rest, and what God does in the night while you are not managing anything.</div>
@@ -3419,7 +3433,7 @@ section{scroll-margin-top:70px;}
         <div class="blog-read-more">Read Article</div>
       </div>
 
-      <div class="blog-card" onclick="window.open('selah-childrens-book.html','_blank')" style="cursor:pointer;">
+      <div class="blog-card" onclick=\"window.location.href='selah-childrens-book.html'\" style=\"cursor:pointer;\" style="cursor:pointer;">
         <div class="blog-category">Story &nbsp;&middot;&nbsp; Ages 6&ndash;9</div>
         <div class="blog-title">The Cracks That Shine — <em>A Kintsugi Story for Children</em></div>
         <div class="blog-excerpt">Naya has a favourite bowl. When it breaks, her grandmother teaches her kintsugi — filling the cracks with gold. Then Naya asks the question the whole book was building toward: "Is there gold for me too?"</div>
@@ -3645,7 +3659,7 @@ section{scroll-margin-top:70px;}
         <div class="form-success" id="main-email-success" style="display:none;">
           <div class="form-success-icon">✦</div>
           <div class="form-success-title">You are on the list.</div>
-          <div class="form-success-text">Watch your inbox. The Selah Letter arrives weekly. Session and guide openings go to this list first.</div>
+          <div class="form-success-text">The Selah Letter arrives weekly. Session and guide openings go to this list first.</div><div style="margin-top:14px;"><a href="selah-welcome-email.html" style="display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--deep);border:1px solid var(--deep);padding:12px 22px;text-decoration:none;">Read your first Selah Letter now →</a></div>
         </div>
 
         <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);">
