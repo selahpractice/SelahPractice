@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Write “selah” in your own hand — Selah Practice</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{background:#faf7f1;color:#2c2824;font-family:Georgia,'Times New Roman',serif;padding:22px 16px 40px;}
+.wrap{max-width:640px;margin:0 auto;}
+h1{font-size:24px;font-weight:500;text-align:center;color:#3f4a52;}
+p.how{text-align:center;color:#6f675c;font-size:15px;line-height:1.65;margin:12px auto 18px;max-width:480px;font-family:-apple-system,'Segoe UI',sans-serif;}
+.pad{background:#fffdf9;border:1.5px solid #d8cfbc;border-radius:14px;box-shadow:0 10px 30px rgba(63,74,82,.08);position:relative;overflow:hidden;}
+canvas{display:block;width:100%;height:300px;touch-action:none;cursor:crosshair;}
+.guide{position:absolute;left:6%;right:6%;top:62%;border-top:1.5px dashed #ddd3c0;pointer-events:none;}
+.hint{position:absolute;left:0;right:0;top:40%;text-align:center;color:#c9bda6;font-size:19px;font-style:italic;pointer-events:none;}
+.row{display:flex;gap:12px;margin-top:16px;}
+button{flex:1;padding:16px 10px;border-radius:99px;font-size:16px;font-family:-apple-system,'Segoe UI',sans-serif;border:1.5px solid #3f4a52;background:#fff;color:#3f4a52;}
+button.save{background:#3f4a52;color:#f6f1e8;font-weight:600;}
+button:active{opacity:.75;}
+p.note{text-align:center;color:#8a8175;font-size:13.5px;line-height:1.6;margin-top:16px;font-family:-apple-system,'Segoe UI',sans-serif;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Write it in your own hand</h1>
+<p class="how">Write <b>selah</b> with your finger in the box — big, the way you would sign it. Messy is fine; do it two or three times if you like, clearing in between. When one feels like you, tap <b>Save</b>, then send the picture back in our chat.</p>
+<div class="pad">
+<div class="hint" id="hint">write here</div>
+<div class="guide"></div>
+<canvas id="cv"></canvas>
+</div>
+<div class="row">
+<button id="clearBtn" type="button">Clear</button>
+<button id="saveBtn" class="save" type="button">Save my writing</button>
+</div>
+<p class="note">Save puts the picture in your Photos or Files. Attach it in the chat and I will build the wordmark from your hand.</p>
+</div>
+<script>
+(function(){
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d'),hint=document.getElementById('hint');
+var drawing=false,last=null,hasInk=false;
+function setup(){
+  var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;
+  var old=null;
+  if(hasInk){old=document.createElement('canvas');old.width=cv.width;old.height=cv.height;old.getContext('2d').drawImage(cv,0,0);}
+  cv.width=r.width*d;cv.height=300*d;
+  ctx.setTransform(d,0,0,d,0,0);
+  ctx.lineWidth=5;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle='#3f4a52';
+  if(old){ctx.drawImage(old,0,0,r.width,300);}
+}
+setup();
+window.addEventListener('resize',setup);
+function pos(e){var r=cv.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return{x:t.clientX-r.left,y:t.clientY-r.top};}
+function start(e){e.preventDefault();drawing=true;last=pos(e);if(!hasInk){hasInk=true;hint.style.display='none';}}
+function move(e){if(!drawing)return;e.preventDefault();var p=pos(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.quadraticCurveTo(last.x,last.y,(last.x+p.x)/2,(last.y+p.y)/2);ctx.stroke();last=p;}
+function end(){drawing=false;last=null;}
+cv.addEventListener('touchstart',start,{passive:false});
+cv.addEventListener('touchmove',move,{passive:false});
+cv.addEventListener('touchend',end);
+cv.addEventListener('mousedown',start);
+cv.addEventListener('mousemove',move);
+cv.addEventListener('mouseup',end);
+document.getElementById('clearBtn').addEventListener('click',function(){ctx.clearRect(0,0,cv.width,cv.height);hasInk=false;hint.style.display='block';});
+document.getElementById('saveBtn').addEventListener('click',function(){
+  var out=document.createElement('canvas');out.width=cv.width;out.height=cv.height;
+  var o=out.getContext('2d');o.fillStyle='#fffdf9';o.fillRect(0,0,out.width,out.height);o.drawImage(cv,0,0);
+  out.toBlob(function(blob){
+    var file=new File([blob],'my-selah.png',{type:'image/png'});
+    if(navigator.canShare&&navigator.canShare({files:[file]})){
+      navigator.share({files:[file],title:'My selah'}).catch(function(){fallback(blob);});
+    }else{fallback(blob);}
+  },'image/png');
+  function fallback(blob){
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-selah.png';document.body.appendChild(a);a.click();a.remove();
+  }
+});
+})();
+</script>
+</body>
+</html>
