@@ -884,6 +884,27 @@ h2 em{font-style:italic;color:var(--amber)}
 }
 
 </style>
+
+<style>
+#checkup-section .check-item input[type=radio]{display:none}
+#checkup-section .q-select{width:100%;padding:12px 14px;border:1px solid #ddd5c4;border-radius:10px;background:#fff;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--ink)}
+#checkup-section .q-row{display:flex;gap:12px;flex-wrap:wrap}
+#checkup-section .q-half{flex:1;min-width:190px}
+#checkup-section .q-sublabel{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--ink);margin:12px 0 6px}
+#checkup-section .route-card{background:var(--deep);border-radius:12px;padding:22px;margin-bottom:14px}
+#checkup-section .route-card .rc-tag{font-family:'DM Sans',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+#checkup-section .route-card .rc-text{font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.5;color:var(--parchment)}
+#checkup-section .route-card .rc-text strong{color:#e8c98f}
+#checkup-section .route-card a.rc-btn{display:inline-block;margin-top:14px;background:var(--amber);color:var(--deep);font-family:'DM Sans',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:12px 22px;border-radius:99px;text-decoration:none}
+#checkup-section .crisis-card{border:1px solid var(--rust);border-left:4px solid var(--rust);background:#fdf3ee;border-radius:10px;padding:18px 20px;margin-bottom:14px}
+#checkup-section .crisis-card .cc-tag{font-family:'DM Sans',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:6px}
+#checkup-section .crisis-card .cc-text{font-family:'Cormorant Garamond',serif;font-size:16.5px;line-height:1.55;color:var(--ink)}
+#checkup-section .crisis-card a{color:var(--rust);font-weight:600}
+#checkup-section .secondary-line{font-family:'Cormorant Garamond',serif;font-size:15.5px;font-style:italic;color:var(--muted);line-height:1.55;margin:4px 0 14px}
+#checkup-section .secondary-line a{color:var(--amber)}
+#checkup-section .dose-note{display:block;margin-top:8px;font-size:13px;font-style:italic;color:var(--muted)}
+#checkup-section .dose-note a{color:var(--amber)}
+</style>
 </head>
 <body>
 
@@ -1185,6 +1206,60 @@ h2 em{font-style:italic;color:var(--amber)}
         </div>
         <div class="slider-poles"><span>Fragmented</span><span>Restorative</span></div>
       </div>
+      <div class="q-item">
+        <div class="q-label">What time do you usually fall asleep, and what time do you get up?</div>
+        <div class="q-row">
+          <div class="q-half">
+            <div class="q-sublabel" style="margin-top:0">I usually fall asleep</div>
+            <select class="q-select" id="q_sleep_onset">
+              <option value="">Choose…</option>
+              <option value="before10">Before 10 p.m.</option>
+              <option value="10to11">10 – 11 p.m.</option>
+              <option value="11to12">11 p.m. – midnight</option>
+              <option value="12to1">Midnight – 1 a.m.</option>
+              <option value="after1">After 1 a.m.</option>
+            </select>
+          </div>
+          <div class="q-half">
+            <div class="q-sublabel" style="margin-top:0">I usually get up</div>
+            <select class="q-select" id="q_sleep_wake">
+              <option value="">Choose…</option>
+              <option value="before5">Before 5 a.m.</option>
+              <option value="5to6">5 – 6 a.m.</option>
+              <option value="6to7">6 – 7 a.m.</option>
+              <option value="7to8">7 – 8 a.m.</option>
+              <option value="8to9">8 – 9 a.m.</option>
+              <option value="after9">After 9 a.m.</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">My sleep problem is mostly: (check all that sound like you)</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="sleepprob" value="falling"><div class="check-box"></div><span class="check-label">Falling asleep</span></label>
+          <label class="check-item"><input type="checkbox" name="sleepprob" value="nightwaking"><div class="check-box"></div><span class="check-label">Waking in the night</span></label>
+          <label class="check-item"><input type="checkbox" name="sleepprob" value="earlyam"><div class="check-box"></div><span class="check-label">Waking at 3–4 a.m.</span></label>
+          <label class="check-item"><input type="checkbox" name="sleepprob" value="unrefreshed"><div class="check-box"></div><span class="check-label">Waking unrefreshed</span></label>
+          <label class="check-item"><input type="checkbox" name="sleepprob" value="tooearly"><div class="check-box"></div><span class="check-label">Waking too early</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Screens or phone in the last hour before sleep?</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="screens" value="most"><div class="check-box"></div><span class="check-label">Most nights</span></label>
+          <label class="check-item"><input type="radio" name="screens" value="sometimes"><div class="check-box"></div><span class="check-label">Sometimes</span></label>
+          <label class="check-item"><input type="radio" name="screens" value="rarely"><div class="check-box"></div><span class="check-label">Rarely</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Outside in daylight within an hour of waking, most days?</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="light" value="yes"><div class="check-box"></div><span class="check-label">Yes</span></label>
+          <label class="check-item"><input type="radio" name="light" value="some"><div class="check-box"></div><span class="check-label">Some days</span></label>
+          <label class="check-item"><input type="radio" name="light" value="rarely"><div class="check-box"></div><span class="check-label">Rarely</span></label>
+        </div>
+      </div>
 
       <div class="q-item">
         <div class="q-label">Physical symptoms present (check all)</div>
@@ -1197,6 +1272,15 @@ h2 em{font-style:italic;color:var(--amber)}
           <label class="check-item"><input type="checkbox" name="phys" value="skin"><div class="check-box"></div><span class="check-label">Skin flares</span></label>
           <label class="check-item"><input type="checkbox" name="phys" value="cycle"><div class="check-box"></div><span class="check-label">Cycle disruption</span></label>
           <label class="check-item"><input type="checkbox" name="phys" value="immune"><div class="check-box"></div><span class="check-label">Getting sick easily</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Digestion, honestly: (check all present)</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="gut" value="bloating"><div class="check-box"></div><span class="check-label">Bloating after meals</span></label>
+          <label class="check-item"><input type="checkbox" name="gut" value="reflux"><div class="check-box"></div><span class="check-label">Reflux or heartburn</span></label>
+          <label class="check-item"><input type="checkbox" name="gut" value="bowels"><div class="check-box"></div><span class="check-label">Irregular bowels</span></label>
+          <label class="check-item"><input type="checkbox" name="gut" value="foods"><div class="check-box"></div><span class="check-label">Foods that reliably set me off</span></label>
         </div>
       </div>
 
@@ -1216,6 +1300,35 @@ h2 em{font-style:italic;color:var(--amber)}
           <div class="slider-val" id="v_food">5</div>
         </div>
         <div class="slider-poles"><span>Neglected</span><span>Nourishing</span></div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Yesterday, how many meals included a solid protein — a palm-sized portion or more?</div>
+        <select class="q-select" id="q_protein">
+          <option value="">Choose…</option>
+          <option value="0">0 meals</option>
+          <option value="1">1 meal</option>
+          <option value="2">2 meals</option>
+          <option value="3">3 meals</option>
+        </select>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Your first intake most days is:</div>
+        <select class="q-select" id="q_firstintake">
+          <option value="">Choose…</option>
+          <option value="coffee">Coffee alone</option>
+          <option value="coffeewithfood">Coffee with food</option>
+          <option value="breakfast">A real breakfast</option>
+          <option value="nothing">Nothing until noon</option>
+        </select>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Caffeine: cups per day, and any after noon?</div>
+        <select class="q-select" id="q_caffeine">
+          <option value="">Choose…</option>
+          <option value="none">None</option>
+          <option value="morning">1–2, mornings only</option>
+          <option value="heavy">3+, or any after noon</option>
+        </select>
       </div>
     </div>
 
@@ -1275,7 +1388,16 @@ h2 em{font-style:italic;color:var(--amber)}
         <div class="slider-poles"><span>Reactive/flooded</span><span>Regulated</span></div>
       </div>
 
-      <div class="q-item">
+            <div class="q-item">
+        <div class="q-label">When you’re overwhelmed, you most often:</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="protector" value="fight"><div class="check-box"></div><span class="check-label">Rev up and push (fight)</span></label>
+          <label class="check-item"><input type="radio" name="protector" value="flight"><div class="check-box"></div><span class="check-label">Get busy and outrun it (flight)</span></label>
+          <label class="check-item"><input type="radio" name="protector" value="freeze"><div class="check-box"></div><span class="check-label">Go numb and shut down (freeze)</span></label>
+          <label class="check-item"><input type="radio" name="protector" value="fawn"><div class="check-box"></div><span class="check-label">Smooth it over and take care of everyone else (fawn)</span></label>
+        </div>
+      </div>
+<div class="q-item">
         <div class="q-label">What's sitting in you emotionally that doesn't have words yet?</div>
         <textarea id="q_emo_open" placeholder="Write freely. No format needed."></textarea>
       </div>
@@ -1289,7 +1411,7 @@ h2 em{font-style:italic;color:var(--amber)}
 
   <!-- SECTION 3: HPA + HORMONAL -->
   <div id="s3" class="section">
-    <p class="section-intro">Your labs are pending. This section maps the symptom picture so we can cross-reference once results arrive.</p>
+    <p class="section-intro">This section maps the symptom picture of your stress axis — the pattern matters more than any single number.</p>
 
     <div class="domain-card">
       <div class="domain-header">
@@ -1321,12 +1443,35 @@ h2 em{font-style:italic;color:var(--amber)}
       </div>
 
       <div class="q-item">
-        <div class="q-label">Consistency of medications & supplements this week</div>
+        <div class="q-label">Consistency of medications this week</div>
         <div class="slider-row">
           <input type="range" min="1" max="10" value="5" oninput="updateVal(this,'v_meds')" id="q_meds">
           <div class="slider-val" id="v_meds">5</div>
         </div>
         <div class="slider-poles"><span>Missed many</span><span>Consistent</span></div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Which of these do you currently take? (check all)</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="supp" value="magnesium"><div class="check-box"></div><span class="check-label">Magnesium</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="vitd"><div class="check-box"></div><span class="check-label">Vitamin D</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="omega3"><div class="check-box"></div><span class="check-label">Omega-3 / fish oil</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="bcomplex"><div class="check-box"></div><span class="check-label">B-complex or multivitamin</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="iron"><div class="check-box"></div><span class="check-label">Iron</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="probiotic"><div class="check-box"></div><span class="check-label">Probiotic</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="adaptogen"><div class="check-box"></div><span class="check-label">Adaptogens (ashwagandha, rhodiola)</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="inositolberb"><div class="check-box"></div><span class="check-label">Inositol or berberine</span></label>
+          <label class="check-item"><input type="checkbox" name="supp" value="none"><div class="check-box"></div><span class="check-label">None of these</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">You feel most depleted:</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="depleted" value="waking"><div class="check-box"></div><span class="check-label">On waking</span></label>
+          <label class="check-item"><input type="radio" name="depleted" value="afternoon"><div class="check-box"></div><span class="check-label">Mid-afternoon</span></label>
+          <label class="check-item"><input type="radio" name="depleted" value="evening"><div class="check-box"></div><span class="check-label">Evening</span></label>
+          <label class="check-item"><input type="radio" name="depleted" value="wirednight"><div class="check-box"></div><span class="check-label">I’m wired at night instead</span></label>
+        </div>
       </div>
 
       <div class="q-item">
@@ -1359,6 +1504,14 @@ h2 em{font-style:italic;color:var(--amber)}
         </div>
         <div class="slider-poles"><span>Isolated</span><span>Held</span></div>
       </div>
+      <div class="q-item">
+        <div class="q-label">Is there at least one person you can be completely unguarded with?</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="unguarded" value="yes"><div class="check-box"></div><span class="check-label">Yes</span></label>
+          <label class="check-item"><input type="radio" name="unguarded" value="notreally"><div class="check-box"></div><span class="check-label">Not really</span></label>
+          <label class="check-item"><input type="radio" name="unguarded" value="no"><div class="check-box"></div><span class="check-label">No</span></label>
+        </div>
+      </div>
 
       <div class="q-item">
         <div class="q-label">Relational stressors present (check all)</div>
@@ -1369,6 +1522,33 @@ h2 em{font-style:italic;color:var(--amber)}
           <label class="check-item"><input type="checkbox" name="rel" value="longing"><div class="check-box"></div><span class="check-label">Longing/grief</span></label>
           <label class="check-item"><input type="checkbox" name="rel" value="boundary"><div class="check-box"></div><span class="check-label">Boundary strain</span></label>
           <label class="check-item"><input type="checkbox" name="rel" value="unseen"><div class="check-box"></div><span class="check-label">Feeling unseen</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+
+        <div class="q-label">In the past week, how often did you say yes when you meant no?</div>
+        <div class="slider-row">
+          <input type="range" min="1" max="10" value="5" oninput="updateVal(this,'v_yesno')" id="q_yesno">
+          <div class="slider-val" id="v_yesno">5</div>
+        </div>
+        <div class="slider-poles"><span>Never</span><span>Daily</span></div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">When someone you’re close to pulls away, you usually:</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="attach" value="pursue"><div class="check-box"></div><span class="check-label">Pursue — reach, text, fix</span></label>
+          <label class="check-item"><input type="radio" name="attach" value="withdraw"><div class="check-box"></div><span class="check-label">Withdraw — go quiet first</span></label>
+          <label class="check-item"><input type="radio" name="attach" value="shutdown"><div class="check-box"></div><span class="check-label">Shut down — go numb</span></label>
+          <label class="check-item"><input type="radio" name="attach" value="steady"><div class="check-box"></div><span class="check-label">Stay steady</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">When you need something from someone, you usually:</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="needexpr" value="direct"><div class="check-box"></div><span class="check-label">Ask directly</span></label>
+          <label class="check-item"><input type="radio" name="needexpr" value="hint"><div class="check-box"></div><span class="check-label">Hint and hope</span></label>
+          <label class="check-item"><input type="radio" name="needexpr" value="gowithout"><div class="check-box"></div><span class="check-label">Go without</span></label>
+          <label class="check-item"><input type="radio" name="needexpr" value="alone"><div class="check-box"></div><span class="check-label">Manage alone and feel it later</span></label>
         </div>
       </div>
 
@@ -1412,6 +1592,39 @@ h2 em{font-style:italic;color:var(--amber)}
           <label class="check-item"><input type="checkbox" name="spi" value="doubt"><div class="check-box"></div><span class="check-label">Doubt/questioning</span></label>
           <label class="check-item"><input type="checkbox" name="spi" value="gratitude"><div class="check-box"></div><span class="check-label">Hard to find gratitude</span></label>
           <label class="check-item"><input type="checkbox" name="spi" value="grief"><div class="check-box"></div><span class="check-label">Spiritual grief</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">Which of these are part of your life right now — and which have gone dry?</div>
+        <div class="q-sublabel">Prayer</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="prac_prayer" value="alive"><div class="check-box"></div><span class="check-label">Alive</span></label>
+          <label class="check-item"><input type="radio" name="prac_prayer" value="dry"><div class="check-box"></div><span class="check-label">Dry</span></label>
+          <label class="check-item"><input type="radio" name="prac_prayer" value="absent"><div class="check-box"></div><span class="check-label">Not present</span></label>
+        </div>
+        <div class="q-sublabel">Scripture</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="prac_scripture" value="alive"><div class="check-box"></div><span class="check-label">Alive</span></label>
+          <label class="check-item"><input type="radio" name="prac_scripture" value="dry"><div class="check-box"></div><span class="check-label">Dry</span></label>
+          <label class="check-item"><input type="radio" name="prac_scripture" value="absent"><div class="check-box"></div><span class="check-label">Not present</span></label>
+        </div>
+        <div class="q-sublabel">Worship</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="prac_worship" value="alive"><div class="check-box"></div><span class="check-label">Alive</span></label>
+          <label class="check-item"><input type="radio" name="prac_worship" value="dry"><div class="check-box"></div><span class="check-label">Dry</span></label>
+          <label class="check-item"><input type="radio" name="prac_worship" value="absent"><div class="check-box"></div><span class="check-label">Not present</span></label>
+        </div>
+        <div class="q-sublabel">Faith community</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="prac_community" value="alive"><div class="check-box"></div><span class="check-label">Alive</span></label>
+          <label class="check-item"><input type="radio" name="prac_community" value="dry"><div class="check-box"></div><span class="check-label">Dry</span></label>
+          <label class="check-item"><input type="radio" name="prac_community" value="absent"><div class="check-box"></div><span class="check-label">Not present</span></label>
+        </div>
+        <div class="q-sublabel">Silence and rest</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="prac_silence" value="alive"><div class="check-box"></div><span class="check-label">Alive</span></label>
+          <label class="check-item"><input type="radio" name="prac_silence" value="dry"><div class="check-box"></div><span class="check-label">Dry</span></label>
+          <label class="check-item"><input type="radio" name="prac_silence" value="absent"><div class="check-box"></div><span class="check-label">Not present</span></label>
         </div>
       </div>
 
@@ -1473,6 +1686,15 @@ h2 em{font-style:italic;color:var(--amber)}
           <label class="check-item"><input type="checkbox" name="sys" value="transition"><div class="check-box"></div><span class="check-label">Life transition</span></label>
           <label class="check-item"><input type="checkbox" name="sys" value="housing"><div class="check-box"></div><span class="check-label">Housing/space</span></label>
           <label class="check-item"><input type="checkbox" name="sys" value="future"><div class="check-box"></div><span class="check-label">Future uncertainty</span></label>
+        </div>
+      </div>
+      <div class="q-item">
+        <div class="q-label">In a normal week, how much time is truly yours — no obligations, no one needing you?</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="recovery" value="none"><div class="check-box"></div><span class="check-label">None</span></label>
+          <label class="check-item"><input type="radio" name="recovery" value="underhour"><div class="check-box"></div><span class="check-label">Under an hour</span></label>
+          <label class="check-item"><input type="radio" name="recovery" value="halfday"><div class="check-box"></div><span class="check-label">A half-day</span></label>
+          <label class="check-item"><input type="radio" name="recovery" value="fullday"><div class="check-box"></div><span class="check-label">A full day</span></label>
         </div>
       </div>
 
@@ -1556,12 +1778,229 @@ function closeCheckup() {
     return [...document.querySelectorAll(`input[name=${name}]:checked`)].map(el => el.value);
   }
   function getText(id) { return document.getElementById(id)?.value || ''; }
+  function getRadio(name) { var el = document.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
+  function getSel(id) { var el = document.getElementById(id); return el ? el.value : ''; }
 
   function scoreToStatus(val) {
     if (val <= 3) return 'critical';
     if (val <= 5) return 'low';
     if (val <= 7) return 'moderate';
     return 'good';
+  }
+
+
+  // -- ROUTING (blueprint section 3): one primary route per result.
+  // Every route names a guide, a chapter anchor, and a first step -- never a bare guide name.
+  function buildRoute(data, primaryDomain, overall) {
+    var has = function(arr, val) { return arr && arr.indexOf(val) >= 0; };
+    function clone(o) { var c = {}; for (var k in o) c[k] = o[k]; return c; }
+    var STILL_LINE = 'Also yours: <a href="still-grounding-guide.pdf">STILL</a> — the grounding pages underneath everything here.';
+    var EMOTION_LINE = 'For this moment: the <a href="selah-emotion-checkin.html">Emotion Check-In</a> — two quiet minutes, right where you are.';
+    var CONTINGENCY_LINE = 'For the surge moments: build your <a href="selah-emotional-contingency.html">Emotional Contingency Plan</a> while things are calm.';
+    var LETTER_LINE = 'Weekly company: the Selah Letter — join below, and let one quiet page a week keep you company.';
+
+    var R = {
+      nightOne: {
+        guideName: 'The Sleep Guide', guideFile: 'selah-guide-sleep.html', anchor: 'night-one', buttonText: 'Open the Sleep Guide',
+        stepText: 'Start the Sleep Guide — <strong>Night One: the 10 p.m. landing.</strong> One page, tonight.',
+        todayText: 'Tonight, run Night One: lights down and screens away by 9 p.m., last meal finished by 8, and a 10 p.m. landing in a cool, dark room.',
+        weekText: 'Keep the same wake time all seven days — the anchor the whole curve hangs from — and get outside in daylight within an hour of waking.',
+        todayLabel: 'Night One: the 10 p.m. landing', weekLabel: 'Same wake time, seven days + morning light',
+        secondaryHTML: STILL_LINE
+      },
+      turningCurve: {
+        guideName: 'The Sleep Guide', guideFile: 'selah-guide-sleep.html', anchor: 'turning-the-curve', buttonText: 'Open the Sleep Guide',
+        stepText: 'Your curve is upside down. Sleep Guide, <strong>Chapter 3: turning the curve around</strong> — light, timing, and the evening wind-down.',
+        todayText: 'Tomorrow morning: outside in daylight within an hour of waking — 10 to 20 minutes, before the phone gets you.',
+        weekText: 'Set a caffeine curfew — nothing after noon — and run the 10-minute evening wind-down each night this week.',
+        todayLabel: 'Morning light within an hour of waking', weekLabel: 'Caffeine curfew + evening wind-down',
+        secondaryHTML: 'When rhythm is underway: <a href="selah-guide-supplements.html#hpa-support">Supplement Guide, Chapter 4</a> — HPA support, honestly.'
+      },
+      threeAm: {
+        guideName: 'The Sleep Guide', guideFile: 'selah-guide-sleep.html', anchor: 'three-am', buttonText: 'Open the Sleep Guide',
+        stepText: 'Your waking has a pattern. Sleep Guide, <strong>Chapter 4: the 3 a.m. waking</strong> — why it happens and what to do in the night itself.',
+        todayText: 'Tonight, put the 3 a.m. card by your bed: when you wake, don’t check the clock and don’t reach for the phone — follow the card.',
+        weekText: 'Eat a protein-anchored evening meal, and note each waking — time, pattern, what helped — in the 7-day rhythm tracker.',
+        todayLabel: 'The 3 a.m. card, by the bed', weekLabel: 'Rhythm tracker + protein-anchored evenings',
+        secondaryHTML: 'In the Nutrition Guide: <a href="selah-guide-nutrition.html#protein-anchor">Chapter 1</a> — evening blood sugar is often part of the 3 a.m. story.'
+      },
+      gutReset: {
+        guideName: 'The Functional Nutrition Guide', guideFile: 'selah-guide-nutrition.html', anchor: 'gut-brain-reset', buttonText: 'Open the Nutrition Guide',
+        stepText: 'Your gut is in this conversation. Nutrition Guide, <strong>Chapter 4: the gut-brain reset</strong> — a two-week gentle protocol.',
+        todayText: 'At your next meal: slow down, chew properly, and add one fermented food — yogurt, kefir, or sauerkraut.',
+        weekText: 'Begin the two-week gentle reset: crowd out before you cut out — one swap a day from the guide’s list.',
+        todayLabel: 'One slow meal + one fermented food', weekLabel: 'The two-week gentle reset, one swap a day',
+        secondaryHTML: STILL_LINE
+      },
+      proteinAnchor: {
+        guideName: 'The Functional Nutrition Guide', guideFile: 'selah-guide-nutrition.html', anchor: 'protein-anchor', buttonText: 'Open the Nutrition Guide',
+        stepText: 'Start the Nutrition Guide — <strong>Chapter 1: the protein anchor.</strong> Tomorrow’s three meals, steadied.',
+        todayText: 'Your next meal: protein first — a palm-sized portion before anything starchy. Protein before starch, at every meal today.',
+        weekText: 'Run the protein-anchor tracker: three boxes a day, one per meal, ticked honestly for seven days.',
+        todayLabel: 'Protein first at the next meal', weekLabel: 'Protein-anchor tracker, 3 boxes a day',
+        secondaryHTML: 'Go deeper in the <a href="selah-guide-supplements.html#blood-sugar">Supplement Guide, Chapter 3</a> — blood-sugar support, and its cautions.'
+      },
+      suppCaution: {
+        guideName: 'The Supplement Guide', guideFile: 'selah-guide-supplements.html', anchor: 'hpa-support', buttonText: 'Open the Supplement Guide',
+        stepText: 'You’re already taking targeted supplements. Supplement Guide, <strong>Chapters 3–4: the caution pages</strong> — interactions and who should not, before anything else.',
+        todayText: 'Before your next dose, read the caution page for what you already take. Interactions first; additions later.',
+        weekText: 'Bring your shelf list to your pharmacist or provider and ask the questions on the provider-questions card.',
+        todayLabel: 'Read the caution page before the next dose', weekLabel: 'Pharmacist check: your shelf, reviewed',
+        secondaryHTML: ''
+      },
+      suppAudit: {
+        guideName: 'The Supplement Guide', guideFile: 'selah-guide-supplements.html', anchor: 'foundations-audit', buttonText: 'Open the Supplement Guide',
+        stepText: 'Before anything new: the Supplement Guide — <strong>Chapter 1: the foundations audit.</strong> Bring your current shelf.',
+        todayText: 'Gather every bottle you take onto one counter and write down what each one is for. That list is the audit’s first page.',
+        weekText: 'Work the shelf audit: keep / pause / drop / ask-about — and ask a pharmacist to check interactions. They are the free interaction experts.',
+        todayLabel: 'Every bottle on one counter, listed', weekLabel: 'The shelf audit: keep / pause / drop / ask',
+        secondaryHTML: ''
+      },
+      shutdown: {
+        guideName: 'Regulate', guideFile: 'selah-guide-regulate.html', anchor: 'shutdown', buttonText: 'Open Regulate',
+        stepText: 'Regulate, <strong>Chapter 3: coming back from shutdown</strong> — gentle, in order, nothing forced.',
+        todayText: 'When shutdown comes today: warmth first — a warm drink, a blanket — then small, rhythmic movement. Nothing forced, nothing big.',
+        weekText: 'Build your coming-back menu from Chapter 3: three gentle moves that have worked for you before, written down where you can find them.',
+        todayLabel: 'Warmth first, then small movement', weekLabel: 'Your coming-back menu, written down',
+        secondaryHTML: EMOTION_LINE
+      },
+      fawn: {
+        guideName: 'Regulate', guideFile: 'selah-guide-regulate.html', anchor: 'fawn', buttonText: 'Open Regulate',
+        stepText: 'Regulate, <strong>Chapter 4: the fawn pattern</strong> — why smoothing it over is a stress state, and the bridge out of it.',
+        todayText: 'Catch one smooth-it-over moment today and pause before you fix it. Just notice what your body does.',
+        weekText: 'Read Chapter 4 alongside the yes audit in Boundaries & Attachment — and practise one small, honest no.',
+        todayLabel: 'Pause before one smooth-it-over', weekLabel: 'One small, honest no',
+        secondaryHTML: EMOTION_LINE
+      },
+      yesAudit: {
+        guideName: 'Boundaries & Attachment', guideFile: 'selah-guide-boundaries.html', anchor: 'yes-audit', buttonText: 'Open the Guide',
+        stepText: 'Start Boundaries & Attachment — <strong>Chapter 1: the yes audit.</strong> One week, counted honestly.',
+        todayText: 'Start the count today: every yes that was a no inside gets a mark. Just count — don’t fix anything yet.',
+        weekText: 'Complete seven days of the yes audit, then circle the one place your capacity leaks the most.',
+        todayLabel: 'Start the yes count today', weekLabel: 'Seven days of the yes audit',
+        secondaryHTML: CONTINGENCY_LINE
+      },
+      reach: {
+        guideName: 'Boundaries & Attachment', guideFile: 'selah-guide-boundaries.html', anchor: 'how-you-reach', buttonText: 'Open the Guide',
+        stepText: 'Boundaries & Attachment, <strong>Chapter 5: how you reach, how you hide</strong> — your pattern, named without shame.',
+        todayText: 'Notice your pattern once today — reaching or hiding — and name it without shame: “That’s my protection.”',
+        weekText: 'Try Chapter 5’s steady practice once: one direct sentence, said plainly, instead of the pattern.',
+        todayLabel: 'Name the pattern, without shame', weekLabel: 'One direct sentence, said plainly',
+        secondaryHTML: EMOTION_LINE
+      },
+      repair: {
+        guideName: 'Boundaries & Attachment', guideFile: 'selah-guide-boundaries.html', anchor: 'repair-and-staying', buttonText: 'Open the Guide',
+        stepText: 'Connection is a biological need, not a luxury. Boundaries & Attachment, <strong>Chapter 6: repair and staying</strong> — and one small step toward one safe person, in Chapter 5.',
+        todayText: 'Choose one safe person and send one honest, small message. Not the whole story — just a door, opened.',
+        weekText: 'Read Chapter 6 and take its one small step toward one safe person this week.',
+        todayLabel: 'One small, honest message', weekLabel: 'One small step toward one safe person',
+        secondaryHTML: LETTER_LINE
+      },
+      load: {
+        guideName: 'Boundaries & Attachment', guideFile: 'selah-guide-boundaries.html', anchor: 'set-one-thing-down', buttonText: 'Open the Guide',
+        stepText: 'Your load is the diagnosis. Boundaries & Attachment, <strong>Chapter 3: set one thing down</strong> — and build your Contingency Plan for the weeks it can’t be set down.',
+        todayText: 'Write down everything you are carrying this week — the full list, on paper, where you can see it.',
+        weekText: 'Choose the one thing from Chapter 3 to reduce, delay, or release — and have the conversation.',
+        todayLabel: 'The full list, on paper', weekLabel: 'Set one thing down',
+        secondaryHTML: CONTINGENCY_LINE
+      },
+      stillSpiritual: {
+        guideName: 'STILL — the free grounding guide', guideFile: 'still-grounding-guide.pdf', anchor: '', buttonText: 'Download STILL (free)',
+        stepText: 'Start with STILL — <strong>§05: God meets you in your body.</strong> The dryness has a physiology; the way back starts with the body, not more effort.',
+        todayText: 'Five minutes of stillness with one honest sentence to God. Lament counts. Silence counts.',
+        weekText: 'Read STILL §05 slowly, in one sitting — and let the body lead the way back.',
+        todayLabel: 'Five minutes, one honest sentence', weekLabel: 'STILL §05, read slowly',
+        secondaryHTML: LETTER_LINE
+      }
+    };
+
+    function protectorRoute() {
+      var labels = { fight: 'you rev up and push', flight: 'you get busy and outrun it', freeze: 'you go numb and shut down', fawn: 'you smooth it over and take care of everyone else' };
+      var step = 'Begin Regulate — <strong>Chapter 1: name your protector.</strong> ';
+      step += data.protector && labels[data.protector] ? 'You told us yours: ' + labels[data.protector] + '. Start where it lives.' : 'Start where your pattern lives.';
+      return {
+        guideName: 'Regulate', guideFile: 'selah-guide-regulate.html', anchor: 'name-your-protector', buttonText: 'Open Regulate',
+        stepText: step,
+        todayText: 'Once today, when your protector arrives, name it — out loud if you can: “This is my protector.” Naming it is the first move.',
+        weekText: 'Fill in your state map from Chapter 1: your signals for revved, for shutdown, and for steady — one honest line each.',
+        todayLabel: 'Name your protector, once, out loud', weekLabel: 'Your state map: revved, shutdown, steady',
+        secondaryHTML: 'For this moment: the <a href="selah-emotion-checkin.html">Emotion Check-In</a>. Underneath everything: <a href="still-grounding-guide.pdf">STILL</a>.'
+      };
+    }
+
+    var proteinVal = parseInt(data.protein, 10);
+    var dryCount = [data.pracPrayer, data.pracScripture, data.pracWorship, data.pracCommunity, data.pracSilence]
+      .filter(function(v) { return v === 'dry' || v === 'absent'; }).length;
+    var inverted = (data.depletedWhen === 'wirednight' && has(data.hpaSymptoms, 'crash')) ||
+                   (has(data.hpaSymptoms, 'wired') && has(data.hpaSymptoms, 'crash')) ||
+                   ((data.sleepOnset === '12to1' || data.sleepOnset === 'after1') && data.depletedWhen === 'wirednight');
+    var suppAnswered = data.suppInventory.length > 0;
+    var suppGap = (suppAnswered && !(has(data.suppInventory, 'magnesium') && has(data.suppInventory, 'vitd') && has(data.suppInventory, 'omega3'))) || data.suppInventory.length >= 4;
+
+    var route;
+    if (overall <= 3) {
+      route = clone(R.nightOne); route.crisisFirst = true; route.secondaryHTML = CONTINGENCY_LINE;
+    } else if (has(data.sleepProb, 'earlyam')) {
+      route = R.threeAm;
+    } else if (has(data.suppInventory, 'adaptogen') || has(data.suppInventory, 'inositolberb')) {
+      route = clone(R.suppCaution);
+      route.anchor = has(data.suppInventory, 'inositolberb') ? 'blood-sugar' : 'hpa-support';
+      if (inverted || primaryDomain === 'HPA & Hormonal') route.secondaryHTML = 'Then the rhythm work: <a href="selah-guide-sleep.html#turning-the-curve">Sleep Guide, Chapter 3</a> — turning the curve around.';
+    } else if (inverted || primaryDomain === 'HPA & Hormonal') {
+      route = R.turningCurve;
+    } else if (data.gutSymptoms.length >= 2) {
+      route = R.gutReset;
+    } else if (primaryDomain === 'Physical' && (data.sleep <= 5 || data.sleepProb.length > 0)) {
+      route = R.nightOne;
+    } else if (has(data.hpaSymptoms, 'craving') || data.firstIntake === 'coffee' || data.firstIntake === 'nothing') {
+      route = clone(R.proteinAnchor);
+      route.stepText = 'Cravings are biochemistry, not willpower. Nutrition Guide, <strong>Chapter 1: the protein anchor</strong> — and the Supplement Guide’s blood-sugar chapter when you’re ready.';
+    } else if (primaryDomain === 'Physical' && (data.food <= 4 || proteinVal <= 1)) {
+      route = R.proteinAnchor;
+    } else if (suppGap) {
+      route = R.suppAudit;
+    } else if (data.protector === 'freeze') {
+      route = clone(R.shutdown);
+      if (has(data.emoSymptoms, 'overwhelm')) route.secondaryHTML = 'For the surge: the <a href="selah-crisis-checkin.html">Crisis Check-In</a> — grounding first, real help within reach.';
+    } else if (data.protector === 'fawn') {
+      route = R.fawn;
+    } else if (primaryDomain === 'Neuro-Emotional' && (data.regulation <= 4 || has(data.emoSymptoms, 'numb') || has(data.emoSymptoms, 'flat'))) {
+      route = protectorRoute();
+    } else if (primaryDomain === 'Relational' || data.yesNo >= 5) {
+      route = R.yesAudit;
+    } else if (data.attachPattern === 'pursue' || data.attachPattern === 'withdraw' || data.attachPattern === 'shutdown') {
+      route = R.reach;
+    } else if (data.connection <= 3 && data.unguarded === 'no') {
+      route = R.repair;
+    } else if (primaryDomain === 'Systems' || data.sysStressors.length >= 3 || data.recovery === 'none') {
+      route = R.load;
+    } else if (primaryDomain === 'Spiritual' || dryCount >= 3) {
+      route = R.stillSpiritual;
+    } else {
+      var fb = { 'Physical': R.nightOne, 'Neuro-Emotional': protectorRoute(), 'HPA & Hormonal': R.turningCurve, 'Relational': R.yesAudit, 'Spiritual': R.stillSpiritual, 'Systems': R.load };
+      route = fb[primaryDomain] || R.nightOne;
+    }
+    if (!route.crisisFirst) route.crisisFirst = false;
+    route.proteinVal = proteinVal;
+    route.dryCount = dryCount;
+    return route;
+  }
+
+  function crisisCardHTML() {
+    return '<div class="crisis-card">' +
+      '<div class="cc-tag">First — if this is a surge</div>' +
+      '<div class="cc-text">Your overall picture is in the acute range. Before any guide: the <a href="selah-crisis-checkin.html">Crisis Check-In</a> is built for exactly this — grounding first, real help within reach. In Canada &amp; the US you can call or text <strong>988</strong> any time. Your route is below, for when the ground is steadier.</div>' +
+      '</div>';
+  }
+
+  function routeCardHTML(route) {
+    if (!route) return '';
+    var href = route.guideFile + (route.anchor ? '#' + route.anchor : '');
+    return '<div class="route-card">' +
+      '<div class="rc-tag">Your Route — start here</div>' +
+      '<div class="rc-text">' + route.stepText + '</div>' +
+      '<a class="rc-btn" href="' + href + '">' + route.buttonText + '</a>' +
+      '</div>';
   }
 
   function generateAssessment() {
@@ -1590,7 +2029,29 @@ function closeCheckup() {
       financial: getSlider('q_fin'),
       work: getSlider('q_work'),
       sysStressors: getChecks('sys'),
-      sysOpen: getText('q_sys_open')
+      sysOpen: getText('q_sys_open'),
+      sleepOnset: getSel('q_sleep_onset'),
+      sleepWake: getSel('q_sleep_wake'),
+      sleepProb: getChecks('sleepprob'),
+      screens: getRadio('screens'),
+      morningLight: getRadio('light'),
+      protein: getSel('q_protein'),
+      firstIntake: getSel('q_firstintake'),
+      caffeine: getSel('q_caffeine'),
+      gutSymptoms: getChecks('gut'),
+      protector: getRadio('protector'),
+      suppInventory: getChecks('supp'),
+      depletedWhen: getRadio('depleted'),
+      unguarded: getRadio('unguarded'),
+      yesNo: getSlider('q_yesno'),
+      attachPattern: getRadio('attach'),
+      needExpr: getRadio('needexpr'),
+      pracPrayer: getRadio('prac_prayer'),
+      pracScripture: getRadio('prac_scripture'),
+      pracWorship: getRadio('prac_worship'),
+      pracCommunity: getRadio('prac_community'),
+      pracSilence: getRadio('prac_silence'),
+      recovery: getRadio('recovery')
     };
 
     var resultsDiv = document.getElementById('results');
@@ -1600,7 +2061,7 @@ function closeCheckup() {
     var allSliders = [data.energy, data.sleep, data.movement, data.food,
                       data.mood, data.focus, data.regulation, data.stress,
                       data.meds, data.connection, data.faith, data.hope,
-                      data.financial, data.work];
+                      data.financial, data.work, data.yesNo];
 
     // Count how many sliders were moved from default (5)
     var movedSliders = allSliders.filter(function(v) { return v !== 5; }).length;
@@ -1608,7 +2069,8 @@ function closeCheckup() {
     // Count total checkboxes checked
     var totalChecked = data.physSymptoms.length + data.emoSymptoms.length +
                        data.hpaSymptoms.length + data.relSymptoms.length +
-                       data.spiSymptoms.length + data.sysStressors.length;
+                       data.spiSymptoms.length + data.sysStressors.length +
+                       data.gutSymptoms.length + data.suppInventory.length + data.sleepProb.length;
 
     // Count open text responses
     var openText = [data.emoOpen, data.bodyOpen, data.relOpen, data.faithOpen, data.sysOpen];
@@ -1681,21 +2143,61 @@ function closeCheckup() {
       financial: getSlider('q_fin'),
       work: getSlider('q_work'),
       sysStressors: getChecks('sys'),
-      sysOpen: getText('q_sys_open')
+      sysOpen: getText('q_sys_open'),
+      sleepOnset: getSel('q_sleep_onset'),
+      sleepWake: getSel('q_sleep_wake'),
+      sleepProb: getChecks('sleepprob'),
+      screens: getRadio('screens'),
+      morningLight: getRadio('light'),
+      protein: getSel('q_protein'),
+      firstIntake: getSel('q_firstintake'),
+      caffeine: getSel('q_caffeine'),
+      gutSymptoms: getChecks('gut'),
+      protector: getRadio('protector'),
+      suppInventory: getChecks('supp'),
+      depletedWhen: getRadio('depleted'),
+      unguarded: getRadio('unguarded'),
+      yesNo: getSlider('q_yesno'),
+      attachPattern: getRadio('attach'),
+      needExpr: getRadio('needexpr'),
+      pracPrayer: getRadio('prac_prayer'),
+      pracScripture: getRadio('prac_scripture'),
+      pracWorship: getRadio('prac_worship'),
+      pracCommunity: getRadio('prac_community'),
+      pracSilence: getRadio('prac_silence'),
+      recovery: getRadio('recovery')
     };
     var resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '<div class="loading">Reading the terrain</div>';
 
     // Domain scores
+    var clamp10 = function(v) { return Math.max(1, Math.min(10, Math.round(v))); };
+    var has = function(arr, val) { return arr && arr.indexOf(val) >= 0; };
     var physScore  = Math.round((data.energy + data.sleep + data.movement + data.food) / 4);
     var emoScore   = Math.round((data.mood + data.focus + data.regulation) / 3);
-    var hpaScore   = Math.round((10 - data.stress + data.meds) / 2);
-    var relScore   = Math.round(data.connection);
+    // HPA (blueprint 2): stress inverted + curve timing + symptom burden.
+    // Medication consistency is context, shown separately -- it no longer moves this score.
+    var hpaBurden = Math.min(2, Math.floor(data.hpaSymptoms.length / 4));
+    var hpaTiming = (data.depletedWhen === 'waking' || data.depletedWhen === 'afternoon' || data.depletedWhen === 'wirednight') ? 1 : 0;
+    var hpaCurve  = (has(data.hpaSymptoms, 'wired') || has(data.hpaSymptoms, 'crash')) ? 1 : 0;
+    var hpaScore   = clamp10((10 - data.stress) - hpaBurden - hpaTiming - hpaCurve);
+    // Relational: the connection slider, tempered by the unguarded-person answer
+    // and by how often she said yes when she meant no.
+    var ungVal = data.unguarded === 'yes' ? 9 : data.unguarded === 'notreally' ? 5 : data.unguarded === 'no' ? 2 : data.connection;
+    var relScore   = clamp10((data.connection * 2 + ungVal + (11 - data.yesNo)) / 4);
     var faithScore = Math.round((data.faith + data.hope) / 2);
     var sysScore   = Math.round((data.financial + data.work) / 2);
     var overall    = Math.round((physScore + emoScore + hpaScore + relScore + faithScore + sysScore) / 6);
 
-    var has = function(arr, val) { return arr && arr.indexOf(val) >= 0; };
+    // Signal counts (blueprint 2): the checkboxes now count -- shown beside each domain bar.
+    var signals = {
+      phys: data.physSymptoms.length + data.gutSymptoms.length,
+      emo: data.emoSymptoms.length,
+      hpa: data.hpaSymptoms.length,
+      rel: data.relSymptoms.length,
+      spi: data.spiSymptoms.length,
+      sys: data.sysStressors.length
+    };
 
     // -- HEADLINE --
     var headline;
@@ -1708,7 +2210,12 @@ function closeCheckup() {
     var scores = [physScore, emoScore, hpaScore, relScore, faithScore, sysScore];
     var names  = ['Physical', 'Neuro-Emotional', 'HPA & Hormonal', 'Relational', 'Spiritual', 'Systems'];
     var lowest = Math.min.apply(null, scores);
-    var primaryDomain = names[scores.indexOf(lowest)];
+    // Tie-break (blueprint 2): domains within a point of the lowest are ranked by signal burden.
+    var sigArr = [signals.phys, signals.emo, signals.hpa, signals.rel, signals.spi, signals.sys];
+    var candIdx = [0, 1, 2, 3, 4, 5].filter(function(i) { return scores[i] <= lowest + 1; });
+    candIdx.sort(function(a, b) { return (sigArr[b] - sigArr[a]) || (scores[a] - scores[b]) || (a - b); });
+    var primaryDomain = names[candIdx[0]];
+    var primaryScore = scores[candIdx[0]];
 
     var patternMap = {
       'Physical': 'Somatic depletion is the primary pattern -- your body is the loudest signal in the room. Energy production, restorative sleep, and cellular nourishment are the foundation everything else depends on, and they need direct clinical attention.',
@@ -1720,6 +2227,9 @@ function closeCheckup() {
     };
     var primaryPattern = patternMap[primaryDomain];
 
+    // -- ROUTE (blueprint 3) --
+    var route = buildRoute(data, primaryDomain, overall);
+
     // -- PNI LAYER --
     var pni = [];
     if (data.stress >= 7) pni.push('Elevated perceived stress is sustaining pro-inflammatory cytokine activity (IL-6, TNF-alpha, CRP) and HPA-mediated cortisol dysregulation. Chronic sympathetic dominance suppresses mucosal immunity, impairs gut barrier integrity, and disrupts the gut-brain axis.');
@@ -1728,7 +2238,7 @@ function closeCheckup() {
     if (data.energy <= 4 || has(data.physSymptoms, 'fatigue')) pni.push('Persistent fatigue in the context of psychosocial load often reflects mitochondrial dysfunction and cell-danger response activation rather than simple energy deficit. The mitochondria downregulate energy production as a protective response to perceived chronic threat.');
     if (has(data.hpaSymptoms, 'wired') && has(data.hpaSymptoms, 'crash')) pni.push('The wired-but-tired pattern with afternoon crash is a hallmark of phase II HPA dysregulation: blunted cortisol awakening response with compensatory evening elevation. This disrupts sleep architecture, impairs immune repair, and creates a self-reinforcing cycle.');
     if (has(data.emoSymptoms, 'numb') || has(data.emoSymptoms, 'flat')) pni.push('Emotional numbing and flattening indicate that the nervous system has shifted into dorsal vagal shutdown -- a protective freeze state. This is not apathy; it is a physiological response to prolonged overwhelm that requires safety and co-regulation, not more stimulation.');
-    if (has(data.physSymptoms, 'gi')) pni.push('GI disruption in this context is almost certainly gut-brain axis mediated. The enteric nervous system (your "second brain") is exquisitely sensitive to stress hormones. Dysbiosis and gut permeability changes are downstream effects of unresolved psychological load.');
+    if ((has(data.physSymptoms, 'gi') || data.gutSymptoms.length > 0)) pni.push('GI disruption in this context is almost certainly gut-brain axis mediated. The enteric nervous system (your "second brain") is exquisitely sensitive to stress hormones. Dysbiosis and gut permeability changes are downstream effects of unresolved psychological load.');
     if (has(data.physSymptoms, 'skin')) pni.push('Skin flares in the context of systemic load reflect the skin-brain-immune axis: mast cell activation, neurogenic inflammation, and cortisol-mediated barrier dysfunction. The skin is not the origin -- it is the messenger.');
     if (pni.length === 0) pni.push('Your psychosocial load is moderate and your biological systems appear to retain adaptive reserve. The PNI picture is one of early-stage allostatic load rather than full dysregulation -- the ideal time to intervene at root cause level.');
     var pniLayer = pni.slice(0, 2).join(' ');
@@ -1740,7 +2250,7 @@ function closeCheckup() {
 
     if (has(data.hpaSymptoms, 'wired') || has(data.hpaSymptoms, 'crash')) insights.push({ type: 'alert', tag: 'Your Cortisol Has a Rhythm -- And Yours Is Off', text: 'Cortisol is not a stress hormone. It is a survival hormone that follows a diurnal curve: it should peak within 30-45 minutes of waking (called the Cortisol Awakening Response), then decline gradually through the day, reaching its lowest point around midnight. This rhythm governs your energy, your immune function, your blood sugar, your mood, and your thyroid. When you experience that wired-at-night feeling combined with the afternoon crash, it typically means your cortisol curve is inverted -- blunted in the morning when you need it, elevated in the evening when you need to wind down. This pattern develops after prolonged stress exposure and is self-reinforcing: the disrupted cortisol disrupts sleep, which further disrupts cortisol. The good news is this is correctable -- but it requires addressing the pattern at the system level, not just the symptom level.' });
 
-    if (has(data.physSymptoms, 'gi')) insights.push({ type: 'note', tag: 'Your Gut Is a Nervous System', text: 'Most people do not know that the gut contains approximately 500 million neurons -- more than the spinal cord -- and produces 90% of the body serotonin and 50% of its dopamine. This is not metaphor. Your gut is a brain. It communicates bidirectionally with your central nervous system via the vagus nerve (the gut-brain axis), and it is exquisitely sensitive to stress hormones. When cortisol and adrenaline are chronically elevated, they alter gut motility, increase intestinal permeability (leaky gut), shift the microbiome composition toward inflammatory species, and suppress the secretory IgA that protects your gut lining. The GI symptoms you are experiencing are almost certainly downstream of your stress and nervous system load -- not a separate GI problem. Addressing the gut means addressing the whole system. A 5R protocol (Remove, Replace, Reinoculate, Repair, Rebalance) alongside nervous system regulation is the integrative standard of care.' });
+    if ((has(data.physSymptoms, 'gi') || data.gutSymptoms.length > 0)) insights.push({ type: 'note', tag: 'Your Gut Is a Nervous System', text: 'Most people do not know that the gut contains approximately 500 million neurons -- more than the spinal cord -- and produces 90% of the body serotonin and 50% of its dopamine. This is not metaphor. Your gut is a brain. It communicates bidirectionally with your central nervous system via the vagus nerve (the gut-brain axis), and it is exquisitely sensitive to stress hormones. When cortisol and adrenaline are chronically elevated, they alter gut motility, increase intestinal permeability (leaky gut), shift the microbiome composition toward inflammatory species, and suppress the secretory IgA that protects your gut lining. The GI symptoms you are experiencing are almost certainly downstream of your stress and nervous system load -- not a separate GI problem. Addressing the gut means addressing the whole system. A 5R protocol (Remove, Replace, Reinoculate, Repair, Rebalance) alongside nervous system regulation is the integrative standard of care.' });
 
     if (has(data.physSymptoms, 'skin')) insights.push({ type: 'note', tag: 'Your Skin Is Your Immune System\'s Outer Layer', text: 'Skin conditions in the context of systemic stress are rarely just a skin problem. The skin, the brain, and the immune system share the same embryological origin -- they all develop from the same tissue layer (the ectoderm). They remain in constant communication throughout life via the skin-brain-immune axis. Stress hormones trigger mast cell activation in the skin, releasing histamine and inflammatory mediators that cause flares in eczema, psoriasis, rosacea, and acne. Elevated cortisol impairs the skin barrier by reducing ceramide production, increasing transepidermal water loss and vulnerability to irritants and allergens. What this means practically: topical treatments address the surface, but the root driver is systemic. Anti-inflammatory nutrition (omega-3s 2-3g/day, quercetin, zinc), cortisol regulation, and gut health will change the skin in ways that topical treatments alone cannot.' });
 
@@ -1771,7 +2281,7 @@ function closeCheckup() {
     var labParts = [];
     if (has(data.hpaSymptoms, 'cold') || has(data.hpaSymptoms, 'hair')) labParts.push('Thyroid function -- including free T3, free T4, TSH, and thyroid antibodies (TPO, anti-Tg) -- is worth a full panel given the cold intolerance and hair changes. Standard TSH alone misses subclinical dysfunction in up to 40% of cases.');
     if (has(data.hpaSymptoms, 'craving') || has(data.physSymptoms, 'fatigue')) labParts.push('Fasting insulin (not just glucose) and HbA1c together reveal insulin resistance patterns that standard glucose testing misses. Pair with a morning cortisol to distinguish between blood sugar and adrenal root causes for the fatigue and craving pattern.');
-    if (has(data.physSymptoms, 'gi') || has(data.physSymptoms, 'immune')) labParts.push('A comprehensive stool analysis (looking at microbiome diversity, zonulin for gut permeability, calprotectin for inflammation, and secretory IgA) would provide a direct window into the gut-brain axis disruption you may be experiencing.');
+    if ((has(data.physSymptoms, 'gi') || data.gutSymptoms.length > 0) || has(data.physSymptoms, 'immune')) labParts.push('A comprehensive stool analysis (looking at microbiome diversity, zonulin for gut permeability, calprotectin for inflammation, and secretory IgA) would provide a direct window into the gut-brain axis disruption you may be experiencing.');
     if (has(data.emoSymptoms, 'sad') || has(data.emoSymptoms, 'flat')) labParts.push('Ferritin (optimal 70-100, not just "in range"), Vitamin D (optimal 100-150 nmol/L), omega-3 index, and homocysteine are all directly linked to mood, focus, and energy -- and are routinely missed on standard panels.');
     if (labParts.length === 0) labParts.push('Based on your terrain, key labs worth requesting from an integrative or naturopathic perspective include: morning cortisol, full thyroid panel (not just TSH), fasting insulin, Vitamin D, ferritin, omega-3 index, and a comprehensive metabolic panel.');
     labParts.push('These are not emergency investigations -- they are the functional medicine baseline that provides the clinical precision to move from symptom management to root cause resolution.');
@@ -1791,8 +2301,8 @@ function closeCheckup() {
     thisWeek.push({ priority: 'high', category: 'Sleep Architecture', action: 'Commit to consistent sleep/wake times for 7 days (even weekends). Circadian rhythm entrainment is the single most powerful reset for cortisol pattern, immune function, and mood -- it requires consistency more than duration.' });
     if (data.movement <= 5) thisWeek.push({ priority: 'high', category: 'Movement as Medicine', action: 'Walk 15-20 minutes every morning in natural light. Morning light exposure calibrates the cortisol awakening response, suppresses melatonin, and sets the circadian clock. This is a clinical intervention, not an exercise suggestion.' });
     thisWeek.push({ priority: 'med', category: 'Anti-Inflammatory Nutrition', action: 'For 7 days: eliminate or minimise ultra-processed foods, refined sugar, and seed oils. Add: wild fatty fish or fish oil (EPA+DHA 2-3g/day), colourful vegetables (aim for 6-8 servings), and fermented foods daily for microbiome support.' });
-    if (has(data.hpaSymptoms, 'craving') || hpaScore <= 5) thisWeek.push({ priority: 'med', category: 'Adaptogen Support', action: 'Consider starting ashwagandha KSM-66 (300-600mg with evening meal). This is the most clinically studied adaptogen for HPA regulation -- reducing cortisol, improving thyroid function, and supporting sleep quality. Effects are typically felt within 2-4 weeks.' });
-    if (has(data.physSymptoms, 'gi')) thisWeek.push({ priority: 'med', category: 'Gut Support', action: 'Begin a basic gut protocol: remove trigger foods (gluten, dairy, alcohol for 14 days as trial), add L-glutamine (5g in water on empty stomach) for gut lining repair, and start a multi-strain probiotic. Gut health directly affects every other domain in this assessment.' });
+    if (has(data.hpaSymptoms, 'craving') || hpaScore <= 5) thisWeek.push({ priority: 'med', category: 'Adaptogen Support', action: 'If adaptogens suit your situation, ashwagandha KSM-66 is the most clinically studied for HPA regulation — but it is not for everyone: it can interact with thyroid medication and sedatives, and it is not used in pregnancy. Read the caution pages first (Supplement Guide, Chapter 4: HPA support, honestly) and check with your provider before starting anything new.' });
+    if ((has(data.physSymptoms, 'gi') || data.gutSymptoms.length > 0)) thisWeek.push({ priority: 'med', category: 'Gut Support', action: 'Begin gently: for 14 days, trial removing your most likely trigger foods, eat slowly, and follow the two-week gut-brain reset in the Nutrition Guide (Chapter 4). Gut-support supplements — forms, cautions, and when symptoms need a workup instead — are covered in the Supplement Guide (Chapter 5).' });
     if (has(data.physSymptoms, 'fatigue') || data.energy <= 4) thisWeek.push({ priority: 'med', category: 'Mitochondrial Support', action: 'Coenzyme Q10 (200-400mg with fat-containing meal), B-complex (active forms: methylfolate, methylcobalamin), and iron-containing foods if suspected deficiency. These are the raw materials for cellular energy production (ATP synthesis).' });
     if (relScore <= 4) thisWeek.push({ priority: 'med', category: 'Relational Medicine', action: 'Schedule one in-person or voice-to-voice connection with someone safe this week. Not text. Not social media. Actual co-regulation. Felt safety activates the ventral vagal system, reduces inflammatory tone, and is physiologically irreplaceable.' });
     if (faithScore <= 5) thisWeek.push({ priority: 'low', category: 'Contemplative Practice', action: 'Introduce one 10-minute contemplative practice daily: centering prayer, lectio divina, meditative reading, or simply sitting in silence. Contemplative practices measurably improve vagal tone, reduce cortisol, and restore the capacity for meaning-making that depletion suppresses.' });
@@ -1811,11 +2321,11 @@ function closeCheckup() {
     var second = names.slice().sort(function(a,b){ return scores[names.indexOf(a)] - scores[names.indexOf(b)]; })[1];
     var flowchart = [
       { level: 'root',   text: 'Current Terrain: ' + (overall <= 4 ? 'Acute Depletion' : overall <= 6 ? 'Moderate-High Load' : overall <= 8 ? 'Moderate Load with Pockets' : 'Stable with Early Signals') },
-      { level: 'domain', text: primaryDomain + ': Primary Domain (Score ' + lowest + '/10) -- Root Cause Priority' },
-      { level: 'urgent', text: 'Today: ' + (data.sleep <= 5 ? 'Sleep protocol + magnesium glycinate' : data.stress >= 7 ? '4-7-8 breathing + electrolyte water' : 'Protein-anchored meal + vagal breathing') },
+      { level: 'domain', text: primaryDomain + ': Primary Domain (Score ' + primaryScore + '/10) -- Root Cause Priority' },
+      { level: 'urgent', text: 'Today: ' + route.todayLabel },
       { level: 'domain', text: second + ': Secondary Domain -- Address alongside primary' },
-      { level: 'action', text: 'This Week: Anti-inflammatory nutrition + morning light walk + adaptogen support' },
-      { level: 'action', text: 'Deeper Investigation: Full thyroid panel + fasting insulin + cortisol curve + micronutrient status' }
+      { level: 'action', text: 'This Week: ' + route.weekLabel },
+      { level: 'action', text: 'Ask your provider about: full thyroid panel + fasting insulin + cortisol curve + micronutrient status' }
     ];
 
     // -- SELAH WORD --
@@ -1941,6 +2451,9 @@ function closeCheckup() {
     var result = {
       headline: headline,
       primaryPattern: primaryPattern,
+      route: route,
+      signals: signals,
+      medsContext: data.meds,
       pniLayer: pniLayer,
       insights: insights.slice(0, 5),
       labConnection: labConnection,
@@ -1954,9 +2467,16 @@ function closeCheckup() {
     window._pendingResult = { result: result, data: data, physScore: physScore, emoScore: emoScore, hpaScore: hpaScore, relScore: relScore, faithScore: faithScore, sysScore: sysScore };
 
     setTimeout(function() {
-      // Show email gate instead of results
+      // Show email gate -- but the route itself is given free, before the gate (blueprint 2).
       var resultsDiv = document.getElementById('results');
+      var gateTop = '';
+      var pr = window._pendingResult;
+      if (pr && pr.result && pr.result.route) {
+        if (pr.result.route.crisisFirst) gateTop += crisisCardHTML();
+        gateTop += routeCardHTML(pr.result.route);
+      }
       resultsDiv.innerHTML = [
+        gateTop,
         '<div class="email-gate">',
         '<div class="eg-icon">*</div>',
         '<div class="eg-title">Your assessment is ready.</div>',
@@ -2013,29 +2533,34 @@ function closeCheckup() {
   function renderResults(r, data, phys, emo, hpa, rel, faith, sys) {
     const now = new Date().toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 
+    const sig = r.signals || {};
     const domainBars = [
-      { label: 'Physical', score: phys },
-      { label: 'Emotional', score: emo },
-      { label: 'HPA/Stress', score: hpa },
-      { label: 'Relational', score: rel },
-      { label: 'Spiritual', score: faith },
-      { label: 'Systems', score: sys }
+      { label: 'Physical', score: phys, signals: sig.phys || 0 },
+      { label: 'Emotional', score: emo, signals: sig.emo || 0 },
+      { label: 'HPA/Stress', score: hpa, signals: sig.hpa || 0 },
+      { label: 'Relational', score: rel, signals: sig.rel || 0 },
+      { label: 'Spiritual', score: faith, signals: sig.spi || 0 },
+      { label: 'Systems', score: sys, signals: sig.sys || 0 }
     ];
 
     let barsHTML = domainBars.map(d => {
       const pct = Math.round(d.score * 10);
       const status = scoreToStatus(d.score);
       return `<div class="domain-bar-row">
-        <div class="domain-bar-label">${d.label}</div>
+        <div class="domain-bar-label" style="width:190px">${d.label} — ${d.signals} signals</div>
         <div class="bar-track"><div class="bar-fill ${status}" style="width:${pct}%"></div></div>
         <div class="bar-pct">${pct}%</div>
       </div>`;
     }).join('');
 
+    const suppRe = /(ashwagandha|berberine|inositol|magnesium|glutamine|coenzyme|coq10|theanine|phosphatidylserine|rhodiola|selenium|dhea|fish oil|epa\+dha|omega-3|vitamin d3)/i;
+    const doseRe = /\d+\s?(mg|mcg|g\/day|g\b)/i;
+    const withCaution = (t) => (t && suppRe.test(t) && doseRe.test(t)) ? t + '<span class="dose-note">Education only — forms, dose ranges, cautions, and interactions are covered in the <a href="selah-guide-supplements.html">Supplement Guide</a>. Check with your provider or pharmacist before starting or changing any supplement.</span>' : t;
+
     let insightsHTML = (r.insights || []).map(i =>
       `<div class="insight-card ${i.type === 'alert' ? 'alert' : i.type === 'note' ? 'note' : ''}">
         <div class="insight-tag">${i.tag}</div>
-        <div class="insight-text">${i.text}</div>
+        <div class="insight-text">${withCaution(i.text)}</div>
       </div>`
     ).join('');
 
@@ -2043,7 +2568,7 @@ function closeCheckup() {
       `<div class="protocol-item">
         <div class="p-priority ${p.priority}"></div>
         <div>
-          <div class="p-text">${p.action}</div>
+          <div class="p-text">${withCaution(p.action)}</div>
           <div class="p-category">${p.category}</div>
         </div>
       </div>`
@@ -2067,8 +2592,12 @@ function closeCheckup() {
     const whyFull = r.primaryPattern || '';
     const whyDot = whyFull.indexOf('. ');
     const primaryWhy = whyDot > 0 ? whyFull.slice(0, whyDot + 1) : whyFull;
-    const todayStep = nodeText(/^Today:/).replace(/^Today:\s*/, '');
-    const weekStep = nodeText(/^This Week:/).replace(/^This Week:\s*/, '');
+    const route = r.route || null;
+    const todayStep = route ? route.todayText : nodeText(/^Today:/).replace(/^Today:\s*/, '');
+    const weekStep = route ? route.weekText : nodeText(/^This Week:/).replace(/^This Week:\s*/, '');
+    const crisisHTML = (route && route.crisisFirst) ? crisisCardHTML() : '';
+    const routeHTML = route ? routeCardHTML(route) : '';
+    const secondaryHTML = (route && route.secondaryHTML) ? '<div class="secondary-line">' + route.secondaryHTML + '</div>' : '';
 
 document.getElementById('results').innerHTML = `
       <hr class="divider">
@@ -2079,8 +2608,12 @@ document.getElementById('results').innerHTML = `
 
       <div class="insight-card note">
         <div class="insight-tag">Primary Domain</div>
-        <div class="insight-text"><strong>${primaryName}.</strong> ${primaryWhy}</div>
+        <div class="insight-text"><strong>${primaryName}.</strong> ${r.primaryPattern}</div>
       </div>
+
+      ${crisisHTML}
+
+      ${routeHTML}
 
       <div class="protocol-section">
         <div class="protocol-heading">Today</div>
@@ -2101,6 +2634,8 @@ document.getElementById('results').innerHTML = `
           </div>
         </div>
       </div>
+
+      ${secondaryHTML}
 
       <hr class="divider">
 
@@ -2135,6 +2670,8 @@ document.getElementById('results').innerHTML = `
         ${barsHTML}
       </div>
 
+      <div class="secondary-line">Medications consistency this week: ${(r.medsContext != null ? r.medsContext : '—')}/10 — shown as context. It no longer raises or lowers your HPA score; symptom pattern and timing carry that reading now.</div>
+
       <div class="insight-card">
         <div class="insight-tag">Assessment Summary</div>
         <div class="insight-text">${r.headline}</div>
@@ -2153,7 +2690,7 @@ document.getElementById('results').innerHTML = `
       ${insightsHTML}
 
       <div class="insight-card note">
-        <div class="insight-tag">Pending Labs -> Clinical Bridge</div>
+        <div class="insight-tag">Ask Your Provider About</div>
         <div class="insight-text">${r.labConnection}</div>
       </div>
 
@@ -2170,7 +2707,7 @@ document.getElementById('results').innerHTML = `
       </div>
 
       <div class="protocol-section">
-        <div class="protocol-heading">Protocol  -  When Labs Return</div>
+        <div class="protocol-heading">Protocol  -  Ask Your Provider About</div>
         ${pItems((r.protocol && r.protocol.whenLabsReturn) || [])}
       </div>
 

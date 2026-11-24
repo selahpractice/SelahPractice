@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foundations First — A Selah Supplement Guide — Selah Practice</title>
+<meta name="description" content="A Selah supplement guide: audit before you buy. Foundations, blood-sugar and HPA support, gut support, and iron — with the cautions in the same breath.">
+<link rel="icon" href="selah-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ef;--card:#fffdf8;--cream:#f5eee0;--slate:#4a3423;--deep:#2e1f13;--ink:#38302a;--body:#5c554b;--muted:#96887a;--sand:#e7dcc8;--amber:#b07d35;--sage:#77815f;--radius:14px;--shadow:0 10px 30px rgba(74,52,35,.08)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}.wrap-wide{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:var(--slate)}img{max-width:100%}
+.script{font-family:'La Belle Aurore',cursive;font-weight:400;color:var(--slate)}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);font-weight:500;text-align:center}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--deep);line-height:1.15}
+h2{font-size:38px;text-align:center;margin-top:14px}
+.lede{max-width:620px;margin:16px auto 0;text-align:center;color:var(--body);font-size:18px;font-weight:300}
+section{padding:72px 0}
+.btn{display:inline-block;padding:14px 30px;border-radius:99px;font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid var(--slate)}
+.btn.solid{background:var(--slate);color:#f6f1e8}.btn.ghost{background:transparent;color:var(--slate)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+header img.logo{height:46px;width:auto}
+nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14.5px;color:var(--slate)}
+nav a.navbtn{border:1.5px solid var(--slate);padding:9px 20px;border-radius:99px;font-weight:500}
+@media(max-width:760px){nav a:not(.navbtn){display:none}}
+.hero{padding:88px 0 64px;text-align:center}
+.hero img.mark{width:min(300px,72%);height:auto;margin:0 auto}
+.hero h1{font-size:46px;margin-top:26px}
+@media(max-width:560px){.hero h1{font-size:36px}}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero p.sub{margin:18px auto 0;color:var(--body);font-size:18.5px;font-weight:300;max-width:540px}
+.hero .ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero .tagline{margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--slate)}
+.doors{max-width:680px;margin:0 auto}
+.door{display:flex;gap:26px;align-items:baseline;padding:34px 10px;border-bottom:1px solid var(--sand);text-decoration:none}
+.door:first-child{border-top:1px solid var(--sand)}
+.door .num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--amber);min-width:38px}
+.door h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--deep);line-height:1.2}
+.door p{color:var(--body);font-weight:300;margin-top:6px;font-size:16.5px}
+.door .go{margin-left:auto;color:var(--amber);font-size:20px;align-self:center}
+.door:hover h3{color:var(--amber)}
+.numsec{max-width:680px;margin:0 auto;padding:38px 0;border-bottom:1px solid var(--sand)}
+.numsec:last-child{border-bottom:none}
+.numsec .num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--amber)}
+.numsec h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--deep);margin-top:8px;line-height:1.2}
+.numsec p{color:var(--body);font-weight:300;margin-top:10px}
+.numsec p b{color:var(--ink);font-weight:500}
+.numsec blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--slate);margin-top:10px;line-height:1.45}
+.holdon{text-align:center;padding:56px 0 8px}
+.holdon .script{font-size:32px}
+.holdon blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px;color:var(--deep);margin-top:12px}
+.holdon .href{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.holdon p{color:var(--body);font-weight:300;margin-top:14px;max-width:520px;margin-left:auto;margin-right:auto}
+.lineage{margin-top:44px;text-align:center;color:var(--muted);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:18px}
+.role{margin-top:10px;color:var(--amber);font-size:14px;letter-spacing:2px;text-transform:uppercase;text-align:center}
+.chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.chip{border:1px solid #ddd0ba;background:#fffdf9;border-radius:99px;padding:7px 15px;font-size:13px;color:var(--slate)}
+.signature{margin-top:34px;border-top:1px solid #ddd0ba;padding-top:20px;text-align:center}
+.signature .sign-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--deep);line-height:1.1}
+.signature .under{font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.contact-box{max-width:560px;margin:40px auto 0;background:var(--card);border:1px solid var(--sand);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 34px}
+.contact-box form{display:flex;gap:10px;flex-wrap:wrap}
+.contact-box input[type=email]{flex:1;min-width:220px;padding:14px 18px;border:1.5px solid var(--sand);border-radius:99px;font-size:15.5px;font-family:inherit;background:#fff;color:var(--ink)}
+.contact-box button{padding:14px 28px;border-radius:99px;border:1.5px solid var(--slate);background:var(--slate);color:#f6f1e8;font-size:15px;font-weight:500;font-family:inherit;cursor:pointer}
+.contact-box .done{display:none;text-align:center;color:var(--sage);font-size:16.5px;padding:10px 0}
+.contact-box .alt{margin-top:18px;text-align:center;color:var(--muted);font-size:14.5px}
+footer{background:#211507;color:#c9b99a;padding:64px 0 44px;text-align:center}
+footer img{height:64px;width:auto;margin:0 auto}
+footer .flinks{margin-top:26px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+footer .flinks a{color:#ece1cb;text-decoration:none;font-size:14.5px}
+footer .disc{max-width:680px;margin:30px auto 0;font-size:13px;line-height:1.7;color:#a08b6d}
+footer .small{margin-top:18px;font-size:13px;color:#8a755a}
+
+.band{background:#2e1f13;padding:72px 0;text-align:center}
+.band .eyebrow{color:#e8c98f}.band h2{color:#f6f1e8}
+.band p{color:#c9b99a;max-width:620px;margin:16px auto 0;font-weight:300;font-size:18px}
+.band a{color:#e8c98f;font-weight:500}
+.more{color:var(--amber);font-weight:500;text-decoration:none}
+.hl{max-width:680px;margin:0 auto;padding:28px 0;border-bottom:1px solid var(--sand)}
+.hl h3{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;color:var(--deep);line-height:1.25}
+.hl p{color:var(--body);font-weight:300;margin-top:8px}
+.tag{display:inline-block;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--amber);border:1px solid var(--sand);border-radius:99px;padding:4px 12px;margin-top:10px;background:#fffdf9}
+.aboutgrid{display:grid;grid-template-columns:290px 1fr;gap:44px;align-items:center;max-width:940px;margin:0 auto}
+@media(max-width:760px){.aboutgrid{grid-template-columns:1fr}}
+.photo-ph{background:var(--cream);border:1px solid var(--sand);border-radius:var(--radius);aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;text-align:center;box-shadow:var(--shadow)}
+.photo-ph img{width:150px;height:auto}
+.photo-ph span{font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--muted);line-height:1.7}
+.hero-left{text-align:left}.hero-left .eyebrow{text-align:left}.hero-left .role{text-align:left}
+.hero-left p.sub{margin-left:0;margin-right:0;max-width:560px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap-wide header-in">
+    <a href="index.html"><img class="logo" src="selah-logo.svg" alt="Selah Practice"></a>
+    <nav>
+      <a href="selah-about.html">About</a>
+      <a href="selah-practice.html">Practice</a>
+      <a href="selah-journal.html">Blog</a>
+      <a href="selah-resources.html">Resources</a>
+      <a href="selah-childrens-book.html">Book</a>
+      <a href="selah-studio-store.html">Studio</a>
+      <a class="navbtn" href="index.html#join">Join the Letter</a>
+    </nav>
+  </div>
+</header>
+<style>
+.caution{max-width:680px;margin:0 auto;border:1px solid var(--sand);border-left:3px solid #8b4a2a;background:#fffdf8;border-radius:10px;padding:20px 22px;color:var(--body);font-weight:300;font-size:15.5px;line-height:1.65}
+.caution b{color:var(--ink);font-weight:500}
+.artefact{margin-top:16px;background:var(--cream);border:1px solid var(--sand);border-radius:10px;padding:18px 20px}
+.artefact .a-tag{font-size:11px;letter-spacing:2.2px;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:8px}
+.artefact p{margin-top:0}
+.artefact ul{margin:8px 0 0 18px;color:var(--body);font-weight:300}
+.artefact li{margin-bottom:5px}
+.artefact li b{color:var(--ink);font-weight:500}
+.warn{margin-top:14px;border-left:3px solid #8b4a2a;background:#fdf3ee;border-radius:8px;padding:14px 16px;color:var(--body);font-weight:300;font-size:15.5px;line-height:1.6}
+.warn b{color:var(--ink);font-weight:500}
+.toc{max-width:680px;margin:34px auto 0}
+.toc a{display:flex;justify-content:space-between;gap:16px;padding:13px 6px;border-bottom:1px solid var(--sand);text-decoration:none;color:var(--body);font-weight:300;font-size:16px}
+.toc a:first-child{border-top:1px solid var(--sand)}
+.toc a b{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--deep)}
+.toc a:hover b{color:var(--amber)}
+</style>
+
+<div class="hero" style="padding-bottom:24px;">
+  <div class="wrap">
+    <div class="eyebrow">Selah Guide · Supplements</div>
+    <h1>Foundations <em>first.</em></h1>
+    <p class="sub">A Selah supplement guide — an audit before a shopping list. Forms matter, cofactors matter, timing matters. Most supplement content sells; this one sorts.</p>
+  </div>
+</div>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+    <div class="caution"><b>Read this first — the guardrails are the guide.</b> This is education only. This guide never says “you should take.” It says “people discuss X with their provider when…” — because the right answer depends on your medications, your labs, and your body. Every chapter carries its cautions <em>in the chapter</em>, not in fine print. Two rules hold everywhere: <b>test, don’t guess</b> for iron and vitamin D; and <b>pharmacists are the free interaction experts</b> — before anything new, ask one to check your actual list. High-interaction herbs in the St.-John’s-wort class are excluded from this guide entirely.</div>
+    <div class="toc">
+      <a href="#foundations-audit"><b>1 · Before you buy — the foundations audit</b><span>→</span></a>
+      <a href="#foundations"><b>2 · The foundations</b><span>→</span></a>
+      <a href="#blood-sugar"><b>3 · Blood sugar support</b><span>→</span></a>
+      <a href="#hpa-support"><b>4 · HPA support, honestly</b><span>→</span></a>
+      <a href="#gut-support"><b>5 · Gut support</b><span>→</span></a>
+      <a href="#iron-mood"><b>6 · Iron and the mood nutrients</b><span>→</span></a>
+      <a href="#build-your-shelf"><b>7 · Build your shelf</b><span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+
+    <div class="numsec" id="foundations-audit">
+      <div class="num">Chapter 1</div>
+      <h3>Before you buy — the foundations audit</h3>
+      <p>Most shelves were built one crisis at a time: something for sleep from a hard month, something for energy from a worse one, a recommendation from a podcast, a bottle from a friend. Nobody designed the whole. The audit asks three questions of every bottle: <b>What gap is this meant to fill? Is that gap real — tested, or at least evidenced? And is it filling it?</b> Food first, labs where labs exist, and rhythm before products: an adaptogen on top of a destroyed sleep curve is decoration.</p>
+      <blockquote>“Test everything; hold fast what is good.” — 1 Thessalonians 5:21. The operating verse of this guide.</blockquote>
+      <div class="artefact"><div class="a-tag">Artefact — the shelf audit worksheet</div>
+        <p>One row per bottle, four columns: <b>what it is · the gap it was for · keep / pause / drop / ask-about · monthly cost</b>. Bring it to appointments. Bring it to the pharmacist. An honest shelf is usually a shorter shelf.</p>
+      </div>
+    </div>
+
+    <div class="numsec" id="foundations">
+      <div class="num">Chapter 2</div>
+      <h3>The foundations</h3>
+      <p><b>Magnesium.</b> The cofactor in hundreds of reactions, including the ones that make energy and calm. Forms matter: <b>glycinate</b> is the well-absorbed, gentle form most people discuss for sleep and tension; oxide is poorly absorbed and mostly a laxative. Educational ranges commonly discussed run <b>200–400mg elemental, in the evening</b>. “Working” feels like: less braced at night, easier sleep onset — over two to four weeks, not two days. <b>Vitamin D3 + K2.</b> D is a hormone precursor, not just a vitamin; K2 is its partner for directing calcium. In northern latitudes, deficiency is the default — which is why this one is tested, not guessed (Chapter 6). Doses are set against a blood level, with a provider. <b>Omega-3 (EPA + DHA).</b> The anti-inflammatory fats; fish oil quality varies enormously. Common educational ranges are <b>1–2g combined EPA+DHA daily</b>, with food. <b>B-complex.</b> Look for active forms (methylfolate, methylcobalamin) if you supplement; food sources are in the <a href="selah-guide-nutrition.html#food-first">Nutrition Guide</a>.</p>
+      <div class="warn"><b>Cautions, in the same breath:</b> high-dose omega-3 can interact with <b>blood thinners</b> — disclose it before any surgery and to any prescriber. Magnesium can reduce absorption of some antibiotics and thyroid medication — separate by several hours. Vitamin D at high doses without testing can push calcium too high. Foundations are gentle, not harmless-by-default.</div>
+    </div>
+
+    <div class="numsec" id="blood-sugar">
+      <div class="num">Chapter 3</div>
+      <h3>Blood sugar support</h3>
+      <p><b>Myo-inositol</b> is the gentlest tool here — a nutrient-like compound involved in insulin signalling, most studied in PCOS and metabolic contexts, commonly discussed at <b>2–4g/day</b>. It is generally well tolerated; its main caution is that it works on the same pathway as blood-sugar medication. <b>Berberine</b> is the stronger, more drug-like one: a plant alkaloid with real evidence for glucose and lipid effects, commonly studied at <b>500mg with meals, two to three times daily</b> — and real interactions to match.</p>
+      <div class="warn"><b>Cautions, before anything else:</b> berberine can <b>add to the effect of diabetes medication</b> (hypoglycemia risk) and affects how the liver processes many drugs. It is <b>not used in pregnancy</b> or while breastfeeding. Inositol alongside diabetes medication needs monitoring for the same additive reason. Neither replaces the <a href="selah-guide-nutrition.html#protein-anchor">protein anchor</a> — they support a curve that food and rhythm are already steadying. If you arrived here from the Check-Up because you already take these: this chapter and the next are your caution pages. Read them before your next dose, not after your next purchase.</div>
+    </div>
+
+    <div class="numsec" id="hpa-support">
+      <div class="num">Chapter 4</div>
+      <h3>HPA support, honestly</h3>
+      <p>Adaptogens modulate the stress response; they do not replace sleep, food, or a set-down load. <a href="selah-guide-sleep.html#turning-the-curve">Rhythm comes first</a> — that ordering is clinical, not decorative. <b>Ashwagandha</b> (KSM-66 is the studied extract, commonly <b>300–600mg/day</b>) has the deepest evidence for cortisol and perceived stress. <b>Rhodiola</b> is the more stimulating one, taken in the morning, discussed for fatigue-dominant patterns. <b>Phosphatidylserine</b> is discussed for evening cortisol that won’t come down.</p>
+      <div class="warn"><b>Who should not, and what interacts:</b> ashwagandha can interact with <b>thyroid medication</b> (it may raise thyroid hormone levels), with <b>sedatives</b>, and with immunosuppressants; it is <b>not used in pregnancy</b>, and people with autoimmune conditions discuss it with their provider first — an immune modulator is not neutral there. Rhodiola can be activating and can interact with antidepressants and stimulants. If your shelf already includes adaptogens, the caution pages are Chapters 3–4 — start there.</div>
+    </div>
+
+    <div class="numsec" id="gut-support">
+      <div class="num">Chapter 5</div>
+      <h3>Gut support</h3>
+      <p><b>Probiotics:</b> strains over CFU theatre. A label shouting 50 billion of unnamed strains tells you less than a modest product naming strains studied for your actual pattern. Probiotics are guests, not residents — they work while you take them, alongside the food environment of the <a href="selah-guide-nutrition.html#gut-brain-reset">gut-brain reset</a>. <b>L-glutamine</b> is the gut lining’s preferred fuel, commonly discussed at <b>5g/day in water</b> for defined seasons, not forever. <b>Digestive basics</b> — eating slowly, chewing, not eating under acute stress — outperform most capsules and cost nothing.</p>
+      <div class="warn"><b>When gut symptoms need a workup instead:</b> blood in stool, unexplained weight loss, pain that wakes you at night, persistent vomiting, or symptoms that progress despite gentle work. Supplements are not a substitute for investigating red flags. Immunocompromised readers discuss probiotics with their provider first.</div>
+    </div>
+
+    <div class="numsec" id="iron-mood">
+      <div class="num">Chapter 6</div>
+      <h3>Iron and the mood nutrients</h3>
+      <p>The ferritin story deserves its own chapter because it is where “your labs are normal” most often misleads. Ferritin — stored iron — is reported against a wide reference range; a value can be “in range” and still sit far below what hair follicles, dopamine synthesis, and thyroid conversion actually need. Many integrative providers discuss <b>optimal ranges well above the lab’s floor</b> for symptomatic women. That conversation belongs with your provider and a blood test — because the opposite error is real too: <b>iron supplemented without a test can overload</b>, and iron is not a “more is better” nutrient.</p>
+      <p><b>B12 and folate</b> follow the same rule: test, then decide. B12 is low in many people who eat few animal foods, take acid-suppressing medication, or have absorption issues — and its deficiency mimics depression and brain fog convincingly. These are mood nutrients in the most literal sense: the chemistry of mood runs on them.</p>
+      <div class="artefact"><div class="a-tag">Artefact — the provider-questions card</div>
+        <ul>
+          <li>“Can we check ferritin, B12, folate, and 25-OH vitamin D — and talk about optimal ranges, not just the reference range?”</li>
+          <li>“Given my medications, are there interactions with anything on my shelf list?”</li>
+          <li>“Which of these symptoms would you want to investigate rather than supplement?”</li>
+          <li>“When should we recheck, and what change would we expect to see?”</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="numsec" id="build-your-shelf">
+      <div class="num">Chapter 7</div>
+      <h3>Build your shelf</h3>
+      <p>Now apply the audit. A finished shelf is short enough to explain: each bottle has a named gap, a form that absorbs, a time of day, and a review date. Do the <b>monthly cost reckoning</b> honestly — a $180/month shelf that duplicates itself is a stressor wearing a wellness costume, and stress is the thing this whole library exists to reduce.</p>
+      <blockquote>The Bereans “examined the Scriptures every day to see if what Paul said was true” — and were called noble for checking. Checking is not unbelief. It is the practice. — Acts 17</blockquote>
+      <div class="artefact"><div class="a-tag">Artefact — the timing chart</div>
+        <ul>
+          <li><b>With food:</b> omega-3, vitamin D3+K2, B-complex (morning), berberine (with meals, if used).</li>
+          <li><b>Evening:</b> magnesium glycinate; ashwagandha (if used) often rides with the evening meal.</li>
+          <li><b>Morning, empty-ish stomach:</b> rhodiola (if used) — it is activating.</li>
+          <li><b>Iron’s rules:</b> away from thyroid medication by several hours, away from calcium and coffee, with vitamin C to help absorption — and only with a test behind it.</li>
+        </ul>
+      </div>
+      <div class="artefact"><div class="a-tag">Artefact — the interaction-check routine</div>
+        <p>Before anything new: <b>pharmacist first</b> (free, fast, and it is literally their expertise), then your prescriber at the next visit, with the shelf audit in hand. No guide — including this one — outranks the people who can see your whole chart.</p>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:44px;"><a class="btn solid" href="selah-checkup.html">Take the Check-Up</a> &nbsp; <a class="btn ghost" href="index.html#join">Join the Letter</a></p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <img src="selah-logo-dark.svg" alt="Selah Practice">
+    <div class="flinks">
+      <a href="selah-about.html">About</a><a href="selah-practice.html">Practice</a><a href="selah-journal.html">Blog / Journal</a><a href="selah-resources.html">Resources</a><a href="selah-childrens-book.html">Book</a><a href="selah-studio-store.html">Studio</a><a href="selah-privacy-policy.html">Privacy</a><a href="https://www.instagram.com/selahpractice_/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="disc">Selah Practice is a practice in formation. Peniel Eshetu is an MSW candidate and health educator — not yet a registered social worker or therapist — and nothing on this site is therapy, counselling, or medical advice. The resources here are educational and supportive. If you are in crisis, call or text 988 (Canada &amp; US) or go to your nearest emergency department.</p>
+    <p class="small">Every crack tells a story. Every repair shines with strength. · Winnipeg, Manitoba · © 2026 Selah Practice</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulate — A Nervous System Field Guide — Selah Practice</title>
+<meta name="description" content="A Selah nervous system field guide: name your protector, resets for revved states, coming back from shutdown, fawn, and building capacity.">
+<link rel="icon" href="selah-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ef;--card:#fffdf8;--cream:#f5eee0;--slate:#4a3423;--deep:#2e1f13;--ink:#38302a;--body:#5c554b;--muted:#96887a;--sand:#e7dcc8;--amber:#b07d35;--sage:#77815f;--radius:14px;--shadow:0 10px 30px rgba(74,52,35,.08)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}.wrap-wide{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:var(--slate)}img{max-width:100%}
+.script{font-family:'La Belle Aurore',cursive;font-weight:400;color:var(--slate)}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);font-weight:500;text-align:center}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--deep);line-height:1.15}
+h2{font-size:38px;text-align:center;margin-top:14px}
+.lede{max-width:620px;margin:16px auto 0;text-align:center;color:var(--body);font-size:18px;font-weight:300}
+section{padding:72px 0}
+.btn{display:inline-block;padding:14px 30px;border-radius:99px;font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid var(--slate)}
+.btn.solid{background:var(--slate);color:#f6f1e8}.btn.ghost{background:transparent;color:var(--slate)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+header img.logo{height:46px;width:auto}
+nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14.5px;color:var(--slate)}
+nav a.navbtn{border:1.5px solid var(--slate);padding:9px 20px;border-radius:99px;font-weight:500}
+@media(max-width:760px){nav a:not(.navbtn){display:none}}
+.hero{padding:88px 0 64px;text-align:center}
+.hero img.mark{width:min(300px,72%);height:auto;margin:0 auto}
+.hero h1{font-size:46px;margin-top:26px}
+@media(max-width:560px){.hero h1{font-size:36px}}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero p.sub{margin:18px auto 0;color:var(--body);font-size:18.5px;font-weight:300;max-width:540px}
+.hero .ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero .tagline{margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--slate)}
+.doors{max-width:680px;margin:0 auto}
+.door{display:flex;gap:26px;align-items:baseline;padding:34px 10px;border-bottom:1px solid var(--sand);text-decoration:none}
+.door:first-child{border-top:1px solid var(--sand)}
+.door .num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--amber);min-width:38px}
+.door h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--deep);line-height:1.2}
+.door p{color:var(--body);font-weight:300;margin-top:6px;font-size:16.5px}
+.door .go{margin-left:auto;color:var(--amber);font-size:20px;align-self:center}
+.door:hover h3{color:var(--amber)}
+.numsec{max-width:680px;margin:0 auto;padding:38px 0;border-bottom:1px solid var(--sand)}
+.numsec:last-child{border-bottom:none}
+.numsec .num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--amber)}
+.numsec h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--deep);margin-top:8px;line-height:1.2}
+.numsec p{color:var(--body);font-weight:300;margin-top:10px}
+.numsec p b{color:var(--ink);font-weight:500}
+.numsec blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--slate);margin-top:10px;line-height:1.45}
+.holdon{text-align:center;padding:56px 0 8px}
+.holdon .script{font-size:32px}
+.holdon blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px;color:var(--deep);margin-top:12px}
+.holdon .href{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.holdon p{color:var(--body);font-weight:300;margin-top:14px;max-width:520px;margin-left:auto;margin-right:auto}
+.lineage{margin-top:44px;text-align:center;color:var(--muted);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:18px}
+.role{margin-top:10px;color:var(--amber);font-size:14px;letter-spacing:2px;text-transform:uppercase;text-align:center}
+.chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.chip{border:1px solid #ddd0ba;background:#fffdf9;border-radius:99px;padding:7px 15px;font-size:13px;color:var(--slate)}
+.signature{margin-top:34px;border-top:1px solid #ddd0ba;padding-top:20px;text-align:center}
+.signature .sign-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--deep);line-height:1.1}
+.signature .under{font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.contact-box{max-width:560px;margin:40px auto 0;background:var(--card);border:1px solid var(--sand);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 34px}
+.contact-box form{display:flex;gap:10px;flex-wrap:wrap}
+.contact-box input[type=email]{flex:1;min-width:220px;padding:14px 18px;border:1.5px solid var(--sand);border-radius:99px;font-size:15.5px;font-family:inherit;background:#fff;color:var(--ink)}
+.contact-box button{padding:14px 28px;border-radius:99px;border:1.5px solid var(--slate);background:var(--slate);color:#f6f1e8;font-size:15px;font-weight:500;font-family:inherit;cursor:pointer}
+.contact-box .done{display:none;text-align:center;color:var(--sage);font-size:16.5px;padding:10px 0}
+.contact-box .alt{margin-top:18px;text-align:center;color:var(--muted);font-size:14.5px}
+footer{background:#211507;color:#c9b99a;padding:64px 0 44px;text-align:center}
+footer img{height:64px;width:auto;margin:0 auto}
+footer .flinks{margin-top:26px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+footer .flinks a{color:#ece1cb;text-decoration:none;font-size:14.5px}
+footer .disc{max-width:680px;margin:30px auto 0;font-size:13px;line-height:1.7;color:#a08b6d}
+footer .small{margin-top:18px;font-size:13px;color:#8a755a}
+
+.band{background:#2e1f13;padding:72px 0;text-align:center}
+.band .eyebrow{color:#e8c98f}.band h2{color:#f6f1e8}
+.band p{color:#c9b99a;max-width:620px;margin:16px auto 0;font-weight:300;font-size:18px}
+.band a{color:#e8c98f;font-weight:500}
+.more{color:var(--amber);font-weight:500;text-decoration:none}
+.hl{max-width:680px;margin:0 auto;padding:28px 0;border-bottom:1px solid var(--sand)}
+.hl h3{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;color:var(--deep);line-height:1.25}
+.hl p{color:var(--body);font-weight:300;margin-top:8px}
+.tag{display:inline-block;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--amber);border:1px solid var(--sand);border-radius:99px;padding:4px 12px;margin-top:10px;background:#fffdf9}
+.aboutgrid{display:grid;grid-template-columns:290px 1fr;gap:44px;align-items:center;max-width:940px;margin:0 auto}
+@media(max-width:760px){.aboutgrid{grid-template-columns:1fr}}
+.photo-ph{background:var(--cream);border:1px solid var(--sand);border-radius:var(--radius);aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;text-align:center;box-shadow:var(--shadow)}
+.photo-ph img{width:150px;height:auto}
+.photo-ph span{font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--muted);line-height:1.7}
+.hero-left{text-align:left}.hero-left .eyebrow{text-align:left}.hero-left .role{text-align:left}
+.hero-left p.sub{margin-left:0;margin-right:0;max-width:560px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap-wide header-in">
+    <a href="index.html"><img class="logo" src="selah-logo.svg" alt="Selah Practice"></a>
+    <nav>
+      <a href="selah-about.html">About</a>
+      <a href="selah-practice.html">Practice</a>
+      <a href="selah-journal.html">Blog</a>
+      <a href="selah-resources.html">Resources</a>
+      <a href="selah-childrens-book.html">Book</a>
+      <a href="selah-studio-store.html">Studio</a>
+      <a class="navbtn" href="index.html#join">Join the Letter</a>
+    </nav>
+  </div>
+</header>
+<style>
+.caution{max-width:680px;margin:0 auto;border:1px solid var(--sand);border-left:3px solid #8b4a2a;background:#fffdf8;border-radius:10px;padding:20px 22px;color:var(--body);font-weight:300;font-size:15.5px;line-height:1.65}
+.caution b{color:var(--ink);font-weight:500}
+.artefact{margin-top:16px;background:var(--cream);border:1px solid var(--sand);border-radius:10px;padding:18px 20px}
+.artefact .a-tag{font-size:11px;letter-spacing:2.2px;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:8px}
+.artefact p{margin-top:0}
+.artefact ul{margin:8px 0 0 18px;color:var(--body);font-weight:300}
+.artefact li{margin-bottom:5px}
+.artefact li b{color:var(--ink);font-weight:500}
+.toc{max-width:680px;margin:34px auto 0}
+.toc a{display:flex;justify-content:space-between;gap:16px;padding:13px 6px;border-bottom:1px solid var(--sand);text-decoration:none;color:var(--body);font-weight:300;font-size:16px}
+.toc a:first-child{border-top:1px solid var(--sand)}
+.toc a b{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--deep)}
+.toc a:hover b{color:var(--amber)}
+</style>
+
+<div class="hero" style="padding-bottom:24px;">
+  <div class="wrap">
+    <div class="eyebrow">Selah Guide · Nervous Regulation</div>
+    <h1><em>Regulate.</em></h1>
+    <p class="sub">A nervous system field guide, organised by state, not by symptom. STILL is the grounding guide; this is its sequel — state-shifting and capacity-building for the days after the pause.</p>
+  </div>
+</div>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+    <div class="caution"><b>Read this first.</b> This guide is education and practice, <b>not trauma therapy</b> — and it says so plainly: these practices stop where trauma processing begins. If your history is asking for processing, or your symptoms are escalating, the right next step is a therapist, and Chapter 5 names how to think about that. If you are in crisis, call or text <b>988</b> (Canada &amp; US) — and the <a href="selah-crisis-checkin.html">Crisis Check-In</a> is built for the surge itself. No practice here is a cure for PTSD, anxiety disorders, or depression, and none is framed as one.</div>
+    <div class="toc">
+      <a href="#name-your-protector"><b>1 · Know your states — name your protector</b><span>→</span></a>
+      <a href="#revved"><b>2 · For the revved states</b><span>→</span></a>
+      <a href="#shutdown"><b>3 · For shutdown — coming back gently</b><span>→</span></a>
+      <a href="#fawn"><b>4 · For fawn</b><span>→</span></a>
+      <a href="#capacity"><b>5 · Building capacity</b><span>→</span></a>
+      <a href="#together"><b>6 · Regulation together</b><span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+
+    <div class="numsec" id="name-your-protector">
+      <div class="num">Chapter 1</div>
+      <h3>Know your states — name your protector</h3>
+      <p>Polyvagal theory, in plain language: your nervous system is always asking one question — <em>am I safe?</em> — and it answers in states. <b>Ventral</b> is the state of safety and connection: you can think, digest, laugh, pray, be met. <b>Fight/flight</b> is mobilisation: the system revs to meet a threat — pushing, fixing, outrunning. <b>Shutdown</b> is the oldest protection: when revving hasn’t worked or isn’t possible, the system powers down — numb, flat, foggy, gone.</p>
+      <p>Your <b>protector</b> is the move your system makes first when it’s overwhelmed: rev up and push (fight), get busy and outrun it (flight), go numb (freeze), or smooth it over and take care of everyone else (fawn). The Check-Up asked you yours. A protector is not a character flaw and not a diagnosis — it is physiology with a history, protection that learned its job early and does it faithfully. Naming it is the first move because an unnamed state drives; a named state can be answered.</p>
+      <blockquote>God breathed into the first human the breath of life — <em>ruach</em>: breath, wind, Spirit, one word. The nervous system’s fastest handle has been in the text since the second chapter. — Genesis 2:7</blockquote>
+      <div class="artefact"><div class="a-tag">Artefact — the state-map worksheet</div>
+        <p>Three rows: <b>Revved · Shutdown · Steady</b>. For each, one line: <em>my signals</em> (what my body does first) and <em>my first move</em> (from Chapters 2–3). Keep it where a hard day can find it — the map is for the moment you can’t think, drawn by the version of you who could.</p>
+      </div>
+    </div>
+
+    <div class="numsec" id="revved">
+      <div class="num">Chapter 2</div>
+      <h3>For the revved states</h3>
+      <p>Fight and flight are energy looking for somewhere to go. Arguing with the rev rarely works; <b>discharge, then downshift</b> does. Discharge is physical: brisk walking, stairs, shaking it out, cold water on the face or a cold pack at the neck (the dive reflex is a fast vagal brake). Then downshift: breath with a <b>long exhale</b> — out longer than in, which is the exhale’s whole job in the system — and <b>orienting</b>: slowly turning the head and letting the eyes land on real things in the room, telling the threat system, in its own language, that the room is safe.</p>
+      <p>The first 90 seconds matter most. A stress chemical surge crests and begins to clear in about that long if you don’t re-fuel it with the story. Move first; interpret later.</p>
+      <div class="artefact"><div class="a-tag">Artefact — the 60-second resets</div>
+        <ul>
+          <li><b>Cold:</b> cold water on the face, or hold something frozen. Count to thirty.</li>
+          <li><b>Exhale:</b> in for four, out for eight, five rounds.</li>
+          <li><b>Orient:</b> name five things you can see, slowly, turning your head.</li>
+          <li><b>Move:</b> sixty seconds of stairs, marching, or shaking out your hands.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="numsec" id="shutdown">
+      <div class="num">Chapter 3</div>
+      <h3>For shutdown — coming back gently</h3>
+      <p>Shutdown is not laziness and not peace. It is the system conserving: flat affect, fog, the sense of being behind glass. The way back is <b>gentle and in order</b> — warmth before movement, rhythm before effort. Warmth: a warm drink held in both hands, a blanket, a shower. Rhythm: rocking, swaying, a slow walk, music with a steady beat. Voice: humming, singing, reading aloud — the vagus nerve runs through the throat, and using your voice is a physiological input, not a metaphor. Small movement, then people: co-regulation (Chapter 6) is often the fastest door out.</p>
+      <p>Why “push through it” backfires: shutdown is a threat response. Demanding performance from a system in shutdown confirms the threat and deepens the power-down. Gentleness is not indulgence here — it is the correct signal.</p>
+      <blockquote>“Be still, and know that I am God.” The stillness of Psalm 46:10 is not striving’s opposite. It is the posture of a system that has stopped bracing.</blockquote>
+      <div class="artefact"><div class="a-tag">Artefact — the coming-back menu</div>
+        <p>Write yours before you need it, three lines: <b>one warmth · one rhythm · one voice</b>. Mine might be: tea in both hands · a slow lap of the block · humming while the kettle boils. Yours will be yours. The menu exists because shutdown is precisely when choosing feels impossible.</p>
+      </div>
+    </div>
+
+    <div class="numsec" id="fawn">
+      <div class="num">Chapter 4</div>
+      <h3>For fawn</h3>
+      <p>Fawn is the protector that looks like kindness: smoothing it over, managing everyone’s feelings, taking care of the room before the room can become a threat. It is a stress state with excellent public relations. Underneath it, the system is braced — scanning, appeasing, spending capacity it does not have — and the bill arrives later as exhaustion, resentment, and the strange grief of being surrounded by people you’ve cared for and feeling entirely alone.</p>
+      <p>The practice is small and specific: <b>pause before the fix</b>. One breath between the tension and your rescue. Notice the body’s lurch toward smoothing. Then, when you can, one honest sentence instead of the polished one. Fawn’s full treatment lives where it belongs — in the <a href="selah-guide-boundaries.html">Boundaries &amp; Attachment Guide</a>, especially the yes audit (Chapter 1) and the scripts (Chapter 4). This chapter is the bridge: it names fawn as physiology so the boundary work can be physiology too, not a personality overhaul.</p>
+    </div>
+
+    <div class="numsec" id="capacity">
+      <div class="num">Chapter 5</div>
+      <h3>Building capacity</h3>
+      <p>The <b>window of tolerance</b> is the band where you can feel things and still think, be triggered and still choose. Capacity-building is widening that window — and the method is <b>titration</b>: small doses of challenge, on purpose, with recovery after. Not flooding yourself to “get stronger.” A hard conversation survived with your practices running widens the window a fraction. So does a regulated response to a small trigger, noticed and named.</p>
+      <p>Track what actually widens yours over a month — not what should. Sleep underneath everything (the <a href="selah-guide-sleep.html">Sleep Guide</a>), food that steadies (the <a href="selah-guide-nutrition.html">Nutrition Guide</a>), and one daily regulation practice chosen from your own map. Capacity is built in ordinary days, quietly.</p>
+      <p><b>When to find a therapist:</b> when the past is intruding on the present — flashbacks, nightmares, avoidance that is shrinking your life; when shutdown or revving is costing you work, relationships, or safety; when you want to process, not just cope. That is not this guide failing. That is the guide knowing its edge.</p>
+      <div class="artefact"><div class="a-tag">Artefact — the regulation menu card (fridge-ready)</div>
+        <ul>
+          <li><b>Revved →</b> cold, exhale, orient, move (Chapter 2).</li>
+          <li><b>Shutdown →</b> warmth, rhythm, voice, one person (Chapter 3).</li>
+          <li><b>Fawn →</b> pause before the fix (Chapter 4).</li>
+          <li><b>Steady →</b> notice, and thank the system. Steadiness noticed is steadiness reinforced.</li>
+        </ul>
+      </div>
+      <div class="artefact"><div class="a-tag">Artefact — the weekly capacity tracker</div>
+        <p>One line a week: <b>my window felt… (narrower / same / wider) · what widened it · what narrowed it</b>. Four lines a month is a clinical picture of your own life.</p>
+      </div>
+    </div>
+
+    <div class="numsec" id="together">
+      <div class="num">Chapter 6</div>
+      <h3>Regulation together</h3>
+      <p>Nervous systems regulate each other. A calm voice, a safe face, a person who is not alarmed by your state — these are measurable physiological inputs; co-regulation is the mechanism underneath “being met.” It is why the lonely body heals slower and why worship — singing together, breathing together, rhythm and voice in a room — is a nervous-system practice whether or not anyone calls it one.</p>
+      <p>This is the Selah thesis made practical: healing is God’s work, and being met is one of the ordinary means He uses. Build your life with at least one person whose presence your body reads as safe — and let yourself be regulated by them on purpose, without apology. Receiving regulation is not weakness. It is how the system was designed to work.</p>
+      <blockquote>Jesus withdrew to lonely places — and also let Himself be met: fed by friends, anointed, accompanied. Regulation, in His pattern, ran in both directions. — Luke 5:16</blockquote>
+    </div>
+
+    <p style="text-align:center;margin-top:44px;"><a class="btn solid" href="selah-checkup.html">Take the Check-Up</a> &nbsp; <a class="btn ghost" href="index.html#join">Join the Letter</a></p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <img src="selah-logo-dark.svg" alt="Selah Practice">
+    <div class="flinks">
+      <a href="selah-about.html">About</a><a href="selah-practice.html">Practice</a><a href="selah-journal.html">Blog / Journal</a><a href="selah-resources.html">Resources</a><a href="selah-childrens-book.html">Book</a><a href="selah-studio-store.html">Studio</a><a href="selah-privacy-policy.html">Privacy</a><a href="https://www.instagram.com/selahpractice_/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="disc">Selah Practice is a practice in formation. Peniel Eshetu is an MSW candidate and health educator — not yet a registered social worker or therapist — and nothing on this site is therapy, counselling, or medical advice. The resources here are educational and supportive. If you are in crisis, call or text 988 (Canada &amp; US) or go to your nearest emergency department.</p>
+    <p class="small">Every crack tells a story. Every repair shines with strength. · Winnipeg, Manitoba · © 2026 Selah Practice</p>
+  </div>
+</footer>
+
+</body>
+</html>
