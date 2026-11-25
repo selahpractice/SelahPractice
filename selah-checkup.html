@@ -1397,6 +1397,15 @@ h2 em{font-style:italic;color:var(--amber)}
           <label class="check-item"><input type="radio" name="protector" value="fawn"><div class="check-box"></div><span class="check-label">Smooth it over and take care of everyone else (fawn)</span></label>
         </div>
       </div>
+      <div class="q-item">
+        <div class="q-label">When you were growing up, did home feel mostly safe and steady?</div>
+        <div class="check-grid">
+          <label class="check-item"><input type="radio" name="earlyhome" value="safe"><div class="check-box"></div><span class="check-label">Mostly yes</span></label>
+          <label class="check-item"><input type="radio" name="earlyhome" value="sometimes"><div class="check-box"></div><span class="check-label">Sometimes</span></label>
+          <label class="check-item"><input type="radio" name="earlyhome" value="alert"><div class="check-box"></div><span class="check-label">Mostly no — I learned to stay alert</span></label>
+          <label class="check-item"><input type="radio" name="earlyhome" value="skip"><div class="check-box"></div><span class="check-label">I&rsquo;d rather not say</span></label>
+        </div>
+      </div>
 <div class="q-item">
         <div class="q-label">What's sitting in you emotionally that doesn't have words yet?</div>
         <textarea id="q_emo_open" placeholder="Write freely. No format needed."></textarea>
@@ -2040,6 +2049,7 @@ function closeCheckup() {
       caffeine: getSel('q_caffeine'),
       gutSymptoms: getChecks('gut'),
       protector: getRadio('protector'),
+      earlyhome: getRadio('earlyhome'),
       suppInventory: getChecks('supp'),
       depletedWhen: getRadio('depleted'),
       unguarded: getRadio('unguarded'),
@@ -2154,6 +2164,7 @@ function closeCheckup() {
       caffeine: getSel('q_caffeine'),
       gutSymptoms: getChecks('gut'),
       protector: getRadio('protector'),
+      earlyhome: getRadio('earlyhome'),
       suppInventory: getChecks('supp'),
       depletedWhen: getRadio('depleted'),
       unguarded: getRadio('unguarded'),
@@ -2614,6 +2625,8 @@ document.getElementById('results').innerHTML = `
       ${crisisHTML}
 
       ${routeHTML}
+
+      ${(data && data.earlyhome === 'alert') ? `<div class="insight-card note"><div class="insight-tag">What your body learned early</div><div class="insight-text">Your protector may have learned its job in childhood — and a nervous system that learned to stay alert young does not unlearn it by force. It unlearns it slowly, in safety, in the body. Start with the <a href="selah-guide-rooted.html">Rooted guide</a>, and <a href="selah-guide-regulate.html#what-your-body-learned-early">Regulate, Chapter 7</a>.</div></div>` : ''}
 
       <div class="protocol-section">
         <div class="protocol-heading">Today</div>
