@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When God Is Silent — Selah Journal — Selah Practice</title>
+<meta name="description" content="When God Is Silent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1410;--deep:#1e1409;--deep2:#2d1f14;--mid:#3a2a18;--parchment:#f6f1e8;--cream:#faf7f1;--warm:#c9b99a;--amber:#b07d35;--rust:#8a3e22;--blush:#c4856a;--sage:#4e6349;--muted:#8a7b68;--border:#ddd3c0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--mid);font-family:'Cormorant Garamond',serif;-webkit-font-smoothing:antialiased;}
+::selection{background:var(--amber);color:var(--deep);}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:14px 26px;background:rgba(30,20,9,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,185,154,.14);}
+nav .brand{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--parchment);text-decoration:none;}
+nav .links{display:flex;gap:22px;}
+nav .links a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
+nav .links a:hover{color:var(--amber);}
+@media(max-width:760px){nav .links{display:none;}}
+.hero{background:radial-gradient(120% 90% at 50% 0%,#3a2817 0%,var(--deep2) 45%,var(--deep) 100%);color:var(--parchment);padding:150px 24px 80px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(176,125,53,.05) 59px,rgba(176,125,53,.05) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(176,125,53,.04) 59px,rgba(176,125,53,.04) 60px);}
+.hero .in{position:relative;z-index:2;max-width:780px;margin:0 auto;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:24px;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:clamp(34px,6vw,56px);line-height:1.15;}
+.hero h1 em{color:var(--blush);}
+.hero .sub{font-size:19px;font-style:italic;color:var(--warm);line-height:1.65;max-width:560px;margin:24px auto 0;}
+.hero .meta{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:26px;}
+.wrap{max-width:720px;margin:0 auto;padding:64px 24px 30px;}
+.wrap p{font-size:19.5px;line-height:1.8;margin-bottom:20px;}
+.wrap p em{color:var(--rust);}
+.wrap h2{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:28px;color:var(--deep);margin:40px 0 16px;}
+.wrap blockquote{border-left:3px solid var(--blush);padding:6px 0 6px 24px;margin:30px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.55;color:var(--deep);}
+.wrap blockquote cite{display:block;margin-top:10px;font-family:'DM Mono',monospace;font-style:normal;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.wrap ul{margin:0 0 20px 22px;}
+.wrap li{font-size:19px;line-height:1.7;margin-bottom:8px;}
+.kintsugi{height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent);margin:44px auto;max-width:340px;position:relative;}
+.kintsugi::after{content:"";position:absolute;left:50%;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--amber);transform:translateX(-50%);}
+.cta-box{background:var(--deep);color:var(--parchment);padding:46px 34px;text-align:center;margin:50px 0 10px;}
+.cta-box h3{font-family:'Playfair Display',serif;font-weight:300;font-style:italic;font-size:27px;margin-bottom:12px;}
+.cta-box p{color:var(--warm);font-size:17px;max-width:440px;margin:0 auto 24px;}
+.btn{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:15px 30px;text-decoration:none;background:var(--parchment);color:var(--deep);}
+.btn:hover{background:var(--amber);}
+.btn-line{background:none;border:1px solid rgba(201,185,154,.5);color:var(--parchment);}
+.series-nav{display:flex;justify-content:space-between;gap:14px;max-width:720px;margin:0 auto;padding:0 24px 70px;flex-wrap:wrap;}
+.series-nav a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rust);text-decoration:none;border:1px solid var(--border);padding:13px 20px;background:#fff;}
+.series-nav a:hover{border-color:var(--amber);color:var(--amber);}
+footer{background:var(--deep);padding:56px 24px 44px;text-align:center;}
+footer .logo{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--parchment);margin-bottom:16px;}
+footer .fl{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+footer .fl a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--warm);text-decoration:none;}
+footer .fl a:hover{color:var(--amber);}
+footer .cp{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:.65;}
+
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="https://selahpractice.ca/">Selah Practice</a>
+  <div class="links">
+    <a href="https://selahpractice.ca/#what">Check-Up</a>
+    <a href="https://selahpractice.ca/#blog">Journal</a>
+    <a href="https://selahpractice.ca/#the-book">The Book</a>
+    <a href="https://selahpractice.ca/#resources">Resources</a>
+    <a href="https://selahpractice.ca/#about">About</a>
+    <a href="https://selahpractice.ca/#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero"><div class="in">
+  <span class="eyebrow">The Journal · Faith + Physiology</span>
+  <h1>When God Is <em>Silent</em></h1>
+  <p class="sub">Disillusionment, expectations, and what to do when heaven feels quiet.</p>
+  <div class="meta">7 min read  -  Faith + Physiology  -  Selah Practice</div>
+</div></section>
+<div class="wrap">
+<p>There is a particular kind of pain that comes when you have prayed honestly, waited faithfully, and still heard nothing back.</p>
+<p>Not rebellion. Not laziness. Not a secret sin you forgot to confess. Just silence — long enough that the silence starts to feel like an answer.</p>
+<p>That is where disillusionment begins. Not always because God failed you, but because the picture you were handed cannot hold the life you are actually living.</p>
+<blockquote>"How long, Lord? Will you forget me forever? How long will you hide your face from me?"<cite>Psalm 13:1</cite></blockquote>
+<h2>Disillusionment is not faithlessness</h2>
+<p>Disillusionment means an illusion is breaking. Sometimes the illusion is that obedience guarantees quick relief. Sometimes it is that strong faith always feels strong. Sometimes it is that if God loved you, He would have moved by now.</p>
+<p>The breaking hurts. But the breaking is not the same as unbelief. Psalm 13 is in the Bible because God made room for the question before He gave the comfort.</p>
+<p>Your body knows this season too. Prolonged hoping keeps the stress system braced: almost, not yet, maybe tomorrow. Hope deferred makes the heart sick — Scripture says that plainly, as diagnosis, not rebuke.</p>
+<blockquote>"Hope deferred makes the heart sick, but a desire fulfilled is a tree of life."<cite>Proverbs 13:12</cite></blockquote>
+<h2>The expectations we carried</h2>
+<p>Many of us expected faith to feel like clarity. We expected prayer to produce movement we could point to. We expected healing to arrive on a timeline our nervous system could survive.</p>
+<p>When those expectations collapse, shame rushes in: <em>Maybe I am the problem. Maybe I did not believe enough. Maybe God is silent because I am too much, too damaged, too late.</em></p>
+<p>Silence is not a verdict on your worth. And unanswered prayer is not proof that your hope was foolish.</p>
+<h2>What to do when God is silent</h2>
+<p><b>Lament without editing.</b> Say the true thing. God can handle the unpolished prayer. Lament is not a lack of faith; it is faith refusing to lie.</p>
+<p><b>Lower the demand on feeling.</b> A depleted body may not register comfort the way it once did. Numbness is information, not condemnation.</p>
+<p><b>Keep the practices small.</b> One verse. One honest sentence. One meal. One walk. One person told the truth. In silence, small is not weak. Small is survivable.</p>
+<p><b>Care for the body carrying the wait.</b> Sleep, food, breath, sunlight, medical care, therapy where needed. The body is not separate from the spiritual life; it is where the waiting is happening.</p>
+<p><b>Keep asking.</b> Endurance is not pretending you no longer want what you asked for. Endurance is remaining, lamenting, and still contending — without making peace into a performance.</p>
+<blockquote>"Though the fig tree does not blossom... yet I will rejoice in the Lord."<cite>Habakkuk 3:17-18</cite></blockquote>
+<p>Habakkuk does not rejoice because the fields filled back up. He rejoices while naming exactly what is missing. That matters. Selah does not ask you to call the empty field full.</p>
+<p>If God feels silent today, you do not have to manufacture a sound. Bring the silence itself. Bring the disillusionment. Bring the expectation that broke. The God who inspired Psalm 13 is not frightened by your honesty.</p>
+<p><em>Being met is our part. The healing is God's.</em></p>
+<div class="cta-box"><h3>Start with the Check-Up</h3><p>A quiet way to name where you are — body, mind, soul, and spirit.</p><a class="btn" href="selah-checkup.html">Take the Check-Up</a></div>
+</div>
+<div class="series-nav"><a href="selah-journal.html">← Back to Journal</a><a href="selah-blog-spiritual-dryness.html">When the Worship Doesn't Move You →</a></div>
+<footer><div class="logo">Selah Practice</div><div class="fl"><a href="selah-about.html">About</a><a href="selah-journal.html">Journal</a><a href="selah-resources.html">Library</a><a href="selah-practice.html">Practice</a></div><p class="cp">Selah Practice · Winnipeg · selahpractice.ca</p></footer>
+</body></html>
